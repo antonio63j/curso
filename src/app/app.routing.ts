@@ -8,17 +8,18 @@ import { InicioComponent } from './inicio/inicio.component';
 import { CopyrightComponent } from './copyright/copyright.component';
 import { FechaactualComponent } from './fechaactual/fechaactual.component';
 import { ViewmodeloComponent } from './viewmodelo/viewmodelo.component';
-
-
+import { EjpropertybindingComponent } from './ejpropertybinding/ejpropertybinding.component';
+import { EjeventbindingComponent } from './ejeventbinding/ejeventbinding.component';
 
 const routes: Routes = [
-  {path: '', component: InicioComponent},
-  {path: '**', component: InicioComponent},
+  {path: '', component: ViewmodeloComponent},
   {path: 'home', component: InicioComponent},
   {path: 'copyright', component: CopyrightComponent},
   {path: 'fechas', component: FechaactualComponent},
-  {path: 'viewmodelo', component: ViewmodeloComponent}
-
+  {path: 'viewmodelo', component: ViewmodeloComponent},
+  {path: 'EjpropertybindingComponent', component: EjpropertybindingComponent},
+  {path: 'EjeventbindingComponent' , component: EjeventbindingComponent},
+  {path: '**', component: InicioComponent},
 
   // {path: 'testproveedores',component: TestproveedoresComponent},
   // {path: 'directivainput',component: UsodirectivainputpadreComponent},

@@ -24,7 +24,8 @@ import { CopyrightComponent } from './copyright/copyright.component';
 import { FechaactualComponent } from './fechaactual/fechaactual.component';
 import { ViewmodeloComponent } from './viewmodelo/viewmodelo.component';
 import { InicioComponent } from './inicio/inicio.component';
-
+import { EjpropertybindingComponent } from './ejpropertybinding/ejpropertybinding.component';
+import { EjeventbindingComponent } from './ejeventbinding/ejeventbinding.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,9 @@ import { InicioComponent } from './inicio/inicio.component';
     CopyrightComponent,
     FechaactualComponent,
     ViewmodeloComponent,
-    InicioComponent
+    InicioComponent,
+    EjpropertybindingComponent,
+    EjeventbindingComponent
   ],
   imports: [
     BrowserModule,
