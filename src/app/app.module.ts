@@ -24,8 +24,15 @@ import { CopyrightComponent } from './copyright/copyright.component';
 import { FechaactualComponent } from './fechaactual/fechaactual.component';
 import { ViewmodeloComponent } from './viewmodelo/viewmodelo.component';
 import { InicioComponent } from './inicio/inicio.component';
+import { PipeeuroPipe } from './mispipes/pipeeuro.pipe';
+import { Pipeeuro2Pipe } from './mispipes/pipeeuro2.pipe';
 import { EjpropertybindingComponent } from './ejpropertybinding/ejpropertybinding.component';
 import { EjeventbindingComponent } from './ejeventbinding/ejeventbinding.component';
+import { Ej2waybindingComponent } from './ej2waybinding/ej2waybinding.component';
+import { EjdirectivangifComponent } from './ejdirectivangif/ejdirectivangif.component';
+import { EjdirectivangstyleComponent } from './ejdirectivangstyle/ejdirectivangstyle.component';
+import { EjdirectivangclassComponent } from './ejdirectivangclass/ejdirectivangclass.component';
+import { EjdirectivangforComponent } from './ejdirectivangfor/ejdirectivangfor.component';
 
 @NgModule({
   declarations: [
@@ -33,9 +40,16 @@ import { EjeventbindingComponent } from './ejeventbinding/ejeventbinding.compone
     CopyrightComponent,
     FechaactualComponent,
     ViewmodeloComponent,
+    PipeeuroPipe,
+    Pipeeuro2Pipe,
     InicioComponent,
     EjpropertybindingComponent,
-    EjeventbindingComponent
+    EjeventbindingComponent,
+    Ej2waybindingComponent,
+    EjdirectivangifComponent,
+    EjdirectivangstyleComponent,
+    EjdirectivangclassComponent,
+    EjdirectivangforComponent
   ],
   imports: [
     BrowserModule,

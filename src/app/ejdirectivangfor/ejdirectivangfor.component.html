@@ -1,0 +1,23 @@
+<h1>Demo directiva ngFor</h1>
+<h4>Utilizamos las clases decoradas con @Pipe que tenemos en .app\mispipes\pipeeuro.pipe.ts y .\app\mispipes\pipeeuro2.pipe.ts</h4>
+
+<hr>
+<h2>Listado de cursos</h2>
+<ul>
+  <li style="display: inline-block;" *ngFor="let curso of cursos">
+  <h2 >{{curso}};</h2>
+  </li>
+  <br>
+  <li style="display: inline-block;" *ngFor="let precio of precios">
+  <h2>{{precio | pipeeuro}};</h2>
+  </li>
+  <br>
+  <li style="display: inline-block;" *ngFor="let precio of precios">
+  <h2>{{precio | pipeeuro2}};</h2>
+  </li>
+</ul>
+<hr>
+<img src="./assets/img/directiva-ngfor-vista.png" title ="La vista">
+<hr>
+<img src="./assets/img/directiva-ngfor-componente.png" title ="El componente">
+

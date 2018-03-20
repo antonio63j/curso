@@ -13,7 +13,11 @@ export const ROUTES: RouteInfo[] = [
     { path: 'fechas', title: 'Fechas demo', icon: 'pe-7s-note2', class: '' },
     { path: 'viewmodelo', title: 'viewmodelo demo', icon: 'pe-7s-news-paper', class: '' },
     { path: 'EjpropertybindingComponent', title: 'Property-Binding demo', icon: 'pe-7s-news-paper', class: '' },
-    { path: 'EjeventbindingComponent', title: 'Event-Binding demo', icon: 'pe-7s-news-paper', class: '' }
+    { path: 'Ej2waybindingComponent', title: 'TwoWay-Binding demo', icon: 'pe-7s-news-paper', class: '' },
+    { path: 'EjdirectivangifComponent', title: 'Directiva ngIf demo', icon: 'pe-7s-news-paper', class: '' },
+    { path: 'EjdirectivangstyleComponent', title: 'Directiva ngStyle demo', icon: 'pe-7s-news-paper', class: '' },
+    { path: 'EjdirectivangclassComponent', title: 'Directiva ngClass demo', icon: 'pe-7s-news-paper', class: '' },
+    { path: 'EjdirectivangforComponent', title: 'Directiva ngFor demo', icon: 'pe-7s-news-paper', class: '' },
 
   ];
 @Component({
@@ -31,5 +35,6 @@ export class SidebarComponent implements OnInit {
   }
   isMobileMenu() {
     return false;
-  };
+  }
 }
+

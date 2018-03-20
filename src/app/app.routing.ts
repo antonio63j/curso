@@ -10,6 +10,12 @@ import { FechaactualComponent } from './fechaactual/fechaactual.component';
 import { ViewmodeloComponent } from './viewmodelo/viewmodelo.component';
 import { EjpropertybindingComponent } from './ejpropertybinding/ejpropertybinding.component';
 import { EjeventbindingComponent } from './ejeventbinding/ejeventbinding.component';
+import { Ej2waybindingComponent } from './ej2waybinding/ej2waybinding.component';
+import { EjdirectivangifComponent } from './ejdirectivangif/ejdirectivangif.component';
+import { EjdirectivangstyleComponent } from './ejdirectivangstyle/ejdirectivangstyle.component';
+import { EjdirectivangclassComponent } from './ejdirectivangclass/ejdirectivangclass.component';
+import { EjdirectivangforComponent } from './ejdirectivangfor/ejdirectivangfor.component';
+
 
 const routes: Routes = [
   {path: '', component: ViewmodeloComponent},
@@ -19,6 +25,11 @@ const routes: Routes = [
   {path: 'viewmodelo', component: ViewmodeloComponent},
   {path: 'EjpropertybindingComponent', component: EjpropertybindingComponent},
   {path: 'EjeventbindingComponent' , component: EjeventbindingComponent},
+  {path: 'Ej2waybindingComponent' , component: Ej2waybindingComponent},
+  {path: 'EjdirectivangifComponent' , component: EjdirectivangifComponent},
+  {path: 'EjdirectivangstyleComponent' , component: EjdirectivangstyleComponent},
+  {path: 'EjdirectivangclassComponent' , component: EjdirectivangclassComponent},
+  {path: 'EjdirectivangforComponent' , component: EjdirectivangforComponent},
   {path: '**', component: InicioComponent},
 
   // {path: 'testproveedores',component: TestproveedoresComponent},

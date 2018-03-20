@@ -1,0 +1,18 @@
+p.a {
+    font: 25px arial bold, sans-serif;
+}
+p.normal {
+    font-weight: normal;
+}
+
+p.light {
+    font-weight: lighter;
+}
+
+p.thick {
+    font-weight: bold;
+}
+
+p.thicker {
+    font-weight: 900;
+}

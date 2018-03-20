@@ -1,0 +1,26 @@
+<h4>Ejemplo two way binding. Los datos van de la vista hacia el controlador y 
+y del controlador a la vista. Cuando se introduce un numero desde la vista, el 
+valor está disponible en el controlador. Cuando se hace clic en el boton, 
+se invoca el metodo incrementrarNumero(), que actualiza el dato binculado "numero".
+</h4>
+
+<p class="a">En la vista:</p>
+
+<h4>&lt;input type="number" [(ngModel)] = "numero"&gt;;</h4>
+<h4>&#123; &#123;numero&#125; &#125;</h4>
+
+<p class="a">En el controlador:</p>
+<h4>
+    numero = 10;
+    incrementarNumero() &#123;
+       this.numero = this.numero + 1;
+       &#125;
+</h4>
+
+<p class ="a">Resultado:</p>
+<label> Introduce un numero</label>
+<input type="number" [(ngModel)] = "numero">
+<h3>{{numero}}</h3>
+<button class="btn btn-success"
+(click)="incrementarNumero()">Click para incrementar número
+</button>
