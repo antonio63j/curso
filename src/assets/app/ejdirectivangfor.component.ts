@@ -10,8 +10,7 @@ import { Http, Response } from '@angular/http';
 export class EjdirectivangforComponent implements OnInit {
   cursos: string[];
   precios: number[];
-  codets: string;
-  codehtml: string;
+  code: string;
   // code = `
   
   // constructor(private http: Http) {
@@ -28,11 +27,8 @@ export class EjdirectivangforComponent implements OnInit {
     this.cursos = ['java', 'cobol', 'angular'];
     this.precios = [10.5, 11.6, 2.125];
 
-    this.http.get('assets/app/ejdirectivangfor.component.ts').subscribe(data => {
-      this.codets = data.text();
-    });  
-    this.http.get('assets/app/ejdirectivangfor.component.html').subscribe(data => {
-      this.codehtml = data.text();
+    this.http.get('assets/app/f1.txt').subscribe(data => {
+      this.code = data.text();
   })
 
 

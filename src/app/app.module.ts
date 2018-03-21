@@ -34,6 +34,8 @@ import { EjdirectivangstyleComponent } from './ejdirectivangstyle/ejdirectivangs
 import { EjdirectivangclassComponent } from './ejdirectivangclass/ejdirectivangclass.component';
 import { EjdirectivangforComponent } from './ejdirectivangfor/ejdirectivangfor.component';
 
+import { HighlightModule } from 'ngx-highlightjs';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -60,7 +62,8 @@ import { EjdirectivangforComponent } from './ejdirectivangfor/ejdirectivangfor.c
     SidebarModule,
     RouterModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HighlightModule.forRoot()
     // LbdModule
   ],
   providers: [],
