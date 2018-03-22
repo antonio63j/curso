@@ -12,32 +12,17 @@ export class EjdirectivangforComponent implements OnInit {
   precios: number[];
   codets: string;
   codehtml: string;
-  // code = `
-  
-  // constructor(private http: Http) {
-  //   this.cursos = ['java', 'cobol', 'angular'];
-  //   this.precios = [10.5, 11.6, 2.125];
-  // }
-  //   ngOnInit() {
 
-  //     }
-  
-  // `
-  
   constructor(private http: Http) {
     this.cursos = ['java', 'cobol', 'angular'];
     this.precios = [10.5, 11.6, 2.125];
 
-    this.http.get('assets/app/ejdirectivangfor.component.ts').subscribe(data => {
-      this.codets = data.text();
-    });  
-    this.http.get('assets/app/ejdirectivangfor.component.html').subscribe(data => {
-      this.codehtml = data.text();
-  })
-
-
+    this.http.get('assets/app/ejdirectivangfor.component.ts')
+                 .subscribe(data => {this.codets = data.text(); });
+    this.http.get('assets/app/ejdirectivangfor.component.html')
+                .subscribe(data => {this.codehtml = data.text(); });
   }
-    ngOnInit() {
 
-      }
+  ngOnInit() {
+  }
 }

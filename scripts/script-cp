@@ -1,0 +1,2 @@
+find ./src/app -iregex ".*\.html.*" -exec cp {} ./src/assets/app/ \;
+find ./src/app -iregex ".*\.ts.*" -exec cp {} ./src/assets/app/ \;

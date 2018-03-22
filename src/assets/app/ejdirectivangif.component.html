@@ -1,0 +1,28 @@
+<h3>Ejemplo de directiva ngIf</h3> <hr>
+<div class="container">
+  <app-fechaactual></app-fechaactual>
+  <br>
+  <label>Nombre y Apellidos</label>
+  <input type="text" class="form-control" [(ngModel)]="nombre1" placeholder="Complete su nombre y apellidos">
+  <button type="submit" class="btn btn-primary" *ngIf="nombre1">Enviar</button>
+  <hr>
+
+<label>Nombre y Apellidos</label>
+<input type="text" class="form-control" [(ngModel)]="nombre2" placeholder="Complete su nombre y apellidos">
+<button type="submit" class="btn btn-primary" *ngIf="nombre2; else desactivado">Enviar</button>
+<ng-template #desactivado>
+  <button type="submit" disabled>Enviar</button>
+</ng-template>
+
+<h3>¿Cuál es la capital de España?</h3>
+<input type="text" class="form-control" [(ngModel)]="capital">
+<p *ngIf="!capital; else tienecontenido">Complete la pregunta</p>
+<ng-template #tienecontenido>
+  <h4 *ngIf="setResultado(); else incorrecto">¡Correcto!</h4>
+</ng-template>
+<ng-template #incorrecto>
+  <h4>Lo siento, inténtelo de nuevo</h4>
+</ng-template>
+
+
+</div>
