@@ -35,7 +35,8 @@ import { EjdirectivangclassComponent } from './ejdirectivangclass/ejdirectivangc
 import { EjdirectivangforComponent } from './ejdirectivangfor/ejdirectivangfor.component';
 import { DirectivamenuDirective } from './directivamenu.directive';
 import { TestdirectivamenuComponent } from './testdirectivamenu/testdirectivamenu.component';
-
+import { UsodirectivainputhijoComponent } from './usodirectivainputhijo/usodirectivainputhijo.component';
+import { UsodirectivainputpadreComponent } from './usodirectivainputpadre/usodirectivainputpadre.component';
 import { HighlightModule } from 'ngx-highlightjs';
 
 @NgModule({
@@ -55,7 +56,9 @@ import { HighlightModule } from 'ngx-highlightjs';
     EjdirectivangclassComponent,
     EjdirectivangforComponent,
     DirectivamenuDirective,
-    TestdirectivamenuComponent
+    TestdirectivamenuComponent,
+    UsodirectivainputpadreComponent,
+    UsodirectivainputhijoComponent
 
   ],
   imports: [

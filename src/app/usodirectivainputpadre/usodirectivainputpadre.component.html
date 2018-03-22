@@ -1,0 +1,21 @@
+
+
+<div style=" border-style: solid; border-width: 6px; border-color: orange; padding: 10px">
+  <h3 style=" color: orange">Demo directiva @Input - Componente Padre</h3>
+  <!-- <div class="container"> <app-header></app-header> </div> -->
+  <app-usodirectivainputhijo [tituloPropiedadDelHijo] = "tituloEsPropiedadDelPadre"></app-usodirectivainputhijo>
+  - El título de arriba lo ha puesto el componente usodirectivainputpadre.components.ts<br>
+
+  - Los valores de abajo vienen de un array del componente usodirectivainputpadre.components.ts
+  <app-usodirectivainputhijo *ngFor="let avisoitem of avisosEsPropiedadDelPadre" [avisoPropiedadDelHijo] ="avisoitem">
+  </app-usodirectivainputhijo>
+</div>
+
+Template hijo
+<pre><code highlight [code]="codeHijohtml">Template hijo</code></pre>
+Component hijo
+<pre><code highlight [code]="codeHijots">Component hijo</code></pre>
+Template padre
+<pre><code highlight [code]="codePadrehtml">Template padre</code></pre>
+Component padre
+<pre><code highlight [code]="codePadrets">Component padre</code></pre>

@@ -11,15 +11,16 @@ export class TestdirectivamenuComponent implements OnInit {
   codehtml: string;
   codedi: string;
 
-  constructor() {
+  constructor(private http: Http, ) {
     this.http.get('assets/app/directivamenu.directive.ts')
     .subscribe(data => { this.codedi = data.text(); });
-    this.http.get('assets/app/ejdirectivangfor.component.ts')
+    this.http.get('assets/app/testdirectivamenu.component.ts')
       .subscribe(data => { this.codets = data.text(); });
-    this.http.get('assets/app/ejdirectivangfor.component.html')
+    this.http.get('assets/app/testdirectivamenu.component.html')
       .subscribe(data => { this.codehtml = data.text(); });
   }
 
   ngOnInit() {
+
   }
 }

@@ -21,5 +21,6 @@ export class TestdirectivamenuComponent implements OnInit {
   }
 
   ngOnInit() {
+
   }
 }
