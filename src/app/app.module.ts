@@ -11,12 +11,14 @@ import { AppRoutingModule } from './app.routing';
 import { NavbarModule } from './shared/navbar/navbar.module';
 import { FooterModule } from './shared/footer/footer.module';
 import { SidebarModule } from './sidebar/sidebar.module';
+import { HighlightModule } from 'ngx-highlightjs';
 // import { LbdModule } from './lbd/lbd.module';
 
-// importacion modulo de arranque
-import { AppComponent } from './app.component';
+// importacion de servicios
 
-// importacion de componentes demos
+
+// importacion de componentes
+import { AppComponent } from './app.component'; 
 import { LoginComponent } from './login/login.component';
 import { RegistroComponent } from './registro/registro.component';
 
@@ -37,7 +39,7 @@ import { DirectivamenuDirective } from './directivamenu.directive';
 import { TestdirectivamenuComponent } from './testdirectivamenu/testdirectivamenu.component';
 import { UsodirectivainputhijoComponent } from './usodirectivainputhijo/usodirectivainputhijo.component';
 import { UsodirectivainputpadreComponent } from './usodirectivainputpadre/usodirectivainputpadre.component';
-import { HighlightModule } from 'ngx-highlightjs';
+import { TestproveedoresComponent } from './testproveedores/testproveedores.component';
 
 @NgModule({
   declarations: [
@@ -58,8 +60,8 @@ import { HighlightModule } from 'ngx-highlightjs';
     DirectivamenuDirective,
     TestdirectivamenuComponent,
     UsodirectivainputpadreComponent,
-    UsodirectivainputhijoComponent
-
+    UsodirectivainputhijoComponent,
+    TestproveedoresComponent
   ],
   imports: [
     BrowserModule,
@@ -72,9 +74,11 @@ import { HighlightModule } from 'ngx-highlightjs';
     AppRoutingModule,
     ReactiveFormsModule,
     HighlightModule.forRoot()
+
     // LbdModule
   ],
-  providers: [],
+  providers: [
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

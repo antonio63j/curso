@@ -20,7 +20,9 @@ export const ROUTES: RouteInfo[] = [
     { path: 'EjdirectivangforComponent', title: 'Directiva ngFor', icon: 'pe-7s-news-paper', class: '' },
     { path: 'TestdirectivamenuComponent', title: 'Construcción directiva', icon: 'pe-7s-news-paper', class: '' },
     { path: 'Usodirectivainput', title: 'Directiva @Input', icon: 'pe-7s-news-paper', class: '' },
+    { path: 'TestServicioProveedores', title: 'Servicio proveedores', icon: 'pe-7s-news-paper', class: '' },
   ];
+
 @Component({
   selector: 'app-sidebar',
   templateUrl: './sidebar.component.html',

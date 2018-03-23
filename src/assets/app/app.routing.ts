@@ -17,7 +17,7 @@ import { EjdirectivangclassComponent } from './ejdirectivangclass/ejdirectivangc
 import { EjdirectivangforComponent } from './ejdirectivangfor/ejdirectivangfor.component';
 import { TestdirectivamenuComponent } from './testdirectivamenu/testdirectivamenu.component';
 import { UsodirectivainputpadreComponent } from './usodirectivainputpadre/usodirectivainputpadre.component';
-
+import { TestproveedoresComponent } from './testproveedores/testproveedores.component';
 
 const routes: Routes = [
   {path: '', component: ViewmodeloComponent},
@@ -34,6 +34,7 @@ const routes: Routes = [
   {path: 'EjdirectivangforComponent' , component: EjdirectivangforComponent},
   {path: 'TestdirectivamenuComponent' , component: TestdirectivamenuComponent},
   {path: 'Usodirectivainput' , component: UsodirectivainputpadreComponent},
+  {path: 'TestServicioProveedores', component: TestproveedoresComponent},
   {path: '**', component: InicioComponent},
 
   // {path: 'testproveedores',component: TestproveedoresComponent},
