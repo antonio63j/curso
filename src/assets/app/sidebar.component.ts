@@ -18,9 +18,13 @@ export const ROUTES: RouteInfo[] = [
     { path: 'EjdirectivangstyleComponent', title: 'Directiva ngStyle', icon: 'pe-7s-news-paper', class: '' },
     { path: 'EjdirectivangclassComponent', title: 'Directiva ngClass', icon: 'pe-7s-news-paper', class: '' },
     { path: 'EjdirectivangforComponent', title: 'Directiva ngFor', icon: 'pe-7s-news-paper', class: '' },
-    { path: 'TestdirectivamenuComponent', title: 'Construcción directiva', icon: 'pe-7s-news-paper', class: '' },
     { path: 'Usodirectivainput', title: 'Directiva @Input', icon: 'pe-7s-news-paper', class: '' },
+    { path: 'TestdirectivamenuComponent', title: 'Construcción directiva', icon: 'pe-7s-news-paper', class: '' },
+    { path: 'Testdirectivarainbow', title: 'Construcción directiva', icon: 'pe-7s-news-paper', class: '' },
+    { path: 'UsoDirectivaConfirmComponent', title: 'Construcción direcitva', icon: 'pe-7s-news-paper', class: ''},
+    { path: 'TextSnippetComponent', title: 'Construcción directiva con @Output', icon: 'pe-7s-news-paper', class: '' },
     { path: 'TestServicioProveedores', title: 'Servicio proveedores', icon: 'pe-7s-news-paper', class: '' },
+    { path: 'AppDestroy', title: 'Destrucción de servicio local', icon: 'pe-7s-news-paper', class: '' },
   ];
 
 @Component({

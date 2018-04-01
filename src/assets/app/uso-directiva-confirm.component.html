@@ -1,0 +1,30 @@
+<div class="container-demo">
+  <div class="container-demo-texto">
+    <p>Construcción directiva con ámbito de módulo y utilización en componente</p>
+    <p>@Input para asignar  mensaje desde la vista</p>
+    <p>@Input para asignar funcion desde la vista</p>
+    <p>@HostListener</p>
+    <p>La directiva está declarada en app.module.ts en la propiedad "Declarations" del decorador @NgModule</p>
+  </div>
+  <header>Click the buttons to see the confirmation message.</header>
+  <p>
+    <button [appConfirmDirective]="'Are you sure you want to change the color to blue?'" [functionToRun]="setBoxColor('dodgerblue')"
+      [disabled]="boxColor==='dodgerblue'">
+      Blue
+    </button>
+    <button appConfirmDirective="Are you sure you want to change the color to red?" [functionToRun]="setBoxColor('crimson')"
+      [disabled]="boxColor==='crimson'">
+      Red
+    </button>
+  </p>
+  <div [style.backgroundColor]="boxColor" class="box">
+  </div>
+</div>
+
+
+La directiva
+<pre><code highlight [code]="codedi"> Directiva</code></pre>
+La vista
+<pre><code highlight [code]="codehtml">Template</code></pre>
+El componente
+<pre><code highlight [code]="codets"> Component</code></pre>

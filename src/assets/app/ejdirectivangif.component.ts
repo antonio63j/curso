@@ -9,7 +9,7 @@ import { Http, Response } from '@angular/http';
 export class EjdirectivangifComponent implements OnInit {
   codehtml; codets: string;
 
-  nombre1; nombre2; capital: string;
+  nombre1; nombre2; capital: string = 'Toledo';
   constructor(private http: Http) {
     this.http.get('assets/app/ejdirectivangif.component.html')
       .subscribe(data => { this.codehtml = data.text(); });

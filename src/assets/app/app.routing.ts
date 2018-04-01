@@ -18,6 +18,10 @@ import { EjdirectivangforComponent } from './ejdirectivangfor/ejdirectivangfor.c
 import { TestdirectivamenuComponent } from './testdirectivamenu/testdirectivamenu.component';
 import { UsodirectivainputpadreComponent } from './usodirectivainputpadre/usodirectivainputpadre.component';
 import { TestproveedoresComponent } from './testproveedores/testproveedores.component';
+import { UsoDirectivaRainbowComponent } from './uso-directiva-rainbow/uso-directiva-rainbow.component';
+import { UsoDirectivaConfirmComponent } from './uso-directiva-confirm/uso-directiva-confirm.component';
+import { TextSnippetComponent } from './uso-directiva-test-snippets/uso-directiva-test-snippets.component';
+import { AppDestroy } from './testdestroy/testdestroy.component';
 
 const routes: Routes = [
   {path: '', component: ViewmodeloComponent},
@@ -34,7 +38,11 @@ const routes: Routes = [
   {path: 'EjdirectivangforComponent' , component: EjdirectivangforComponent},
   {path: 'TestdirectivamenuComponent' , component: TestdirectivamenuComponent},
   {path: 'Usodirectivainput' , component: UsodirectivainputpadreComponent},
+  {path: 'Testdirectivarainbow', component: UsoDirectivaRainbowComponent},
   {path: 'TestServicioProveedores', component: TestproveedoresComponent},
+  {path: 'UsoDirectivaConfirmComponent', component: UsoDirectivaConfirmComponent},
+  {path: 'TextSnippetComponent', component: TextSnippetComponent},
+  {path: 'AppDestroy', component: AppDestroy},
   {path: '**', component: InicioComponent},
 
   // {path: 'testproveedores',component: TestproveedoresComponent},

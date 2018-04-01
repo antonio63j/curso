@@ -1,7 +1,10 @@
-<h3>Ejemplo de directiva ngIf</h3> <hr>
-<div class="container">
-  <app-fechaactual></app-fechaactual>
-  <br>
+<div class="container-demo">
+  <div class="container-demo-texto">
+    <p>Directiva *NgIf con etiqueta ng-template</p>
+    <p>Two way binding - [(ngModel)]</p>
+  </div>
+  
+  <br><app-fechaactual></app-fechaactual><br>
   <label>Nombre y Apellidos</label>
   <input type="text" class="form-control" [(ngModel)]="nombre1" placeholder="Complete su nombre y apellidos">
   <button type="submit" class="btn btn-primary" *ngIf="nombre1">Enviar</button>

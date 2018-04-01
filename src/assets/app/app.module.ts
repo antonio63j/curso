@@ -14,8 +14,11 @@ import { SidebarModule } from './sidebar/sidebar.module';
 import { HighlightModule } from 'ngx-highlightjs';
 // import { LbdModule } from './lbd/lbd.module';
 
+// importacion mis directivas
+import { RainbowDirectiveDirective } from './misdirectivas/rainbow-directive.directive';
+import { ConfirmDirectiveDirective } from './misdirectivas/confirm-directive.directive';
+import { TextSnippetDirective } from './misdirectivas/test-snippets.directive';
 // importacion de servicios
-
 
 // importacion de componentes
 import { AppComponent } from './app.component'; 
@@ -40,6 +43,11 @@ import { TestdirectivamenuComponent } from './testdirectivamenu/testdirectivamen
 import { UsodirectivainputhijoComponent } from './usodirectivainputhijo/usodirectivainputhijo.component';
 import { UsodirectivainputpadreComponent } from './usodirectivainputpadre/usodirectivainputpadre.component';
 import { TestproveedoresComponent } from './testproveedores/testproveedores.component';
+import { UsoDirectivaRainbowComponent } from './uso-directiva-rainbow/uso-directiva-rainbow.component';
+import { UsoDirectivaConfirmComponent } from './uso-directiva-confirm/uso-directiva-confirm.component';
+import { TextSnippetComponent } from './uso-directiva-test-snippets/uso-directiva-test-snippets.component';
+import { TestDestroy } from './testdestroy/testdestroy.component';
+import { AppDestroy } from './testdestroy/testdestroy.component';
 
 @NgModule({
   declarations: [
@@ -61,7 +69,16 @@ import { TestproveedoresComponent } from './testproveedores/testproveedores.comp
     TestdirectivamenuComponent,
     UsodirectivainputpadreComponent,
     UsodirectivainputhijoComponent,
-    TestproveedoresComponent
+    TestproveedoresComponent,
+    RainbowDirectiveDirective,
+    UsoDirectivaRainbowComponent,
+    ConfirmDirectiveDirective,
+    UsoDirectivaConfirmComponent,
+    TextSnippetDirective,
+    TextSnippetComponent,
+    TestDestroy,
+    AppDestroy
+
   ],
   imports: [
     BrowserModule,

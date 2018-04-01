@@ -1,0 +1,32 @@
+<div class="container-demo">
+  <div class="container-demo-texto">
+    <p>Construcción directiva de ambito de módulo, desde la directiva saltará evento "selected" con el texto seleccionado.</p>
+    <p>Utilización de métodos y propiedades de la directiva desde la vista.</p>
+    <p>@Output, utilizado por la directiva para que desde la vista se envíe evento al controlador</p>
+    <p>@HostListener</p>
+  </div>
+  <hr>
+  <header [hidden]="quote.snippets.length">Select some of the text below.</header>
+  <header [hidden]="!quote.snippets.length">Select some more to add to the list.</header>
+  <p appTextSelector #quote="appTextSelector" (textSelected)="onSelected($event)">
+    {{movieQuote}}
+  </p>
+  <p>Last selection:
+    <em>{{text || 'none'}}</em>
+  </p>
+  <div>
+    <a [hidden]="!quote.snippets.length" (click)="quote.clear(); false" href="">
+      Clear
+    </a>
+    <ol>
+      <li *ngFor="let snippet of quote.snippets">{{snippet}}</li>
+    </ol>
+  </div>
+</div>
+
+La Directiva:
+<pre><code highlight [code] = "codedi"></code></pre>
+La vista:
+<pre><code highlight [code] = "codehtml"></code></pre>
+El controlador
+<pre><code highlight [code] = "codets"></code></pre>
