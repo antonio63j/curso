@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
 
 import { ProveedorModelo} from '../proveedor-modelo';
-
+import {ProveedoresService} from '../proveedores.service';
 @Component({
   selector: 'app-proveedores-add',
   templateUrl: './proveedores-add.component.html',
@@ -12,11 +13,12 @@ export class ProveedoresAddComponent implements OnInit {
 
   provincias: string[] = [ 'Álava','Albacete','Alicante','Almería','Asturias',
    'Valladolid', 'Vizcaya', 'Zamora','Zaragoza'];
-  proveedor2: ProveedorModelo;
+  modeloProveedor: ProveedorModelo;
 
-  constructor() {
-    this.proveedor2 = new ProveedorModelo(
-      'antonio',
+  constructor(private proveedorServicio: ProveedoresService,
+              private router: Router) {
+    this.modeloProveedor = new ProveedorModelo(
+      '',
       '',
       '',
       '',
@@ -27,17 +29,19 @@ export class ProveedoresAddComponent implements OnInit {
   }
 
   onSubmit(formpro: any) {
-// tanto proveedor2 como formpro contienen los datos del formulario
-    this.proveedor2.nombre = formpro.value.nombre;
-    this.proveedor2.cif = formpro.value.cif;
-    this.proveedor2.direccion = formpro.value.direccion;
+// tanto   modeloProveedor como formpro contienen los datos del formulario
+    // this   modeloProveedor.nombre = formpro.value.nombre;
+    // this   modeloProveedor.cif = formpro.value.cif;
+    // this   modeloProveedor.direccion = formpro.value.direccion;
 
-    this.proveedor2.provincia = formpro.value.provincia;
+    // this   modeloProveedor.provincia = formpro.value.provincia;
 
-    this.proveedor2.email = formpro.value.email;
-    console.log(JSON.stringify(formpro.value));
-    console.log(JSON.stringify(this.proveedor2));
+    // this   modeloProveedor.email = formpro.value.email;
+    // console.log(JSON.stringify(formpro.value));
+    // console.log(JSON.stringify(this   modeloProveedor));
     // this.formpro.reset();
+    this.proveedorServicio.addProveedor (this.modeloProveedor);
+    this.router.navigate(['proveedoreshome']);
   }
 
 }

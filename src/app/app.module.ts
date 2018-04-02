@@ -19,6 +19,7 @@ import { RainbowDirectiveDirective } from './misdirectivas/rainbow-directive.dir
 import { ConfirmDirectiveDirective } from './misdirectivas/confirm-directive.directive';
 import { TextSnippetDirective } from './misdirectivas/test-snippets.directive';
 // importacion de servicios
+import { ProveedoresService } from './proveedores/proveedores.service';
 
 // importacion de componentes
 import { AppComponent } from './app.component'; 
@@ -95,6 +96,7 @@ import { AppDestroy } from './testdestroy/testdestroy.component';
     // LbdModule
   ],
   providers: [
+    ProveedoresService
   ],
   bootstrap: [AppComponent]
 })

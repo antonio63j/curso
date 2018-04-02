@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
 
 // Servicios
-import { ProveedoresService } from './proveedores.service';
+// import { ProveedoresService } from './proveedores.service';
 
 // Componentes
 import { ProveedoresRoutingModule } from './proveedores-routing.module';
@@ -24,7 +24,7 @@ import { FormsModule } from '@angular/forms';
     ProveedoresAddComponent,
     ProveedoresHeaderComponent],
   providers: [
-    ProveedoresService
+    // ProveedoresService
   ]
 })
 export class ProveedoresModule { }

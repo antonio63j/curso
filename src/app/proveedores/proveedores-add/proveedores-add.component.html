@@ -8,7 +8,7 @@
                  class="form-control"
                  id="nombre"
                  required
-                 [(ngModel)]="proveedor2.nombre" 
+                 [(ngModel)]="modeloProveedor.nombre" 
                  name="nombre"
                  #nombre="ngModel">
         </div>
@@ -18,7 +18,7 @@
                  class="form-control"
                  id="cif"
                  name="cif"
-                 [(ngModel)]="proveedor2.cif"
+                 [(ngModel)]="modeloProveedor.cif"
           >
         </div>
         <div class="form-group">
@@ -28,7 +28,7 @@
                  id="direccion"
                  name="direccion"
                  required
-                 [(ngModel)]="proveedor2.direccion"
+                 [(ngModel)]="modeloProveedor.direccion"
                  #direccion="ngModel">
         </div>
 
@@ -36,7 +36,7 @@
           <label for ="provincia">Provincia</label>
           <select class="form-control"
                    id="provincia"
-                   [(ngModel)]="proveedor2.provincia"
+                   [(ngModel)]="modeloProveedor.provincia"
                    required
                    name="provincia"
                    #provincia="ngModel">
@@ -58,7 +58,7 @@
             type="text"
             class="form-control"
             id="email"
-            [(ngModel)]="proveedor2.email"
+            [(ngModel)]="modeloProveedor.email"
             name="email"
             required
             email #email="ngModel">

@@ -1,13 +1,21 @@
-
-<h3>Proveedores, Version : {{mensaje}}</h3>
-  <div class="container"> <app-proveedores-header></app-proveedores-header> </div>
-  <table class="table table-bordered table-striped tabla" style="margin-top: 40px;">
-    <thead> <tr class="filters"> <th>Nombre</th> <th>Correo Electrónico</th> <th>Telefono</th> </tr> </thead>
-    <tbody>
-      <tr *ngFor="let proveedor of proveedores">
-        <td>{{ proveedor.nombre }}</td>
-        <td><a href="mailto:{{ proveedor.email }}">{{ proveedor.email }}</a></td>
-        <td>{{ proveedor.telefono }}</td>
-      </tr>
-    </tbody>
-  </table>
+<h3>
+  Proveedores, Version : {{mensaje}}</h3>
+<app-proveedores-header></app-proveedores-header>
+<table class="table table-bordered table-striped tabla" style="margin-top: 40px;">
+  <thead>
+    <tr class="filters">
+      <th>Nombre</th>
+      <th>Correo Electrónico</th>
+      <th>Provincia</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let proveedor of proveedores">
+      <td>{{ proveedor.nombre }}</td>
+      <td>
+        <a href="mailto:{{ proveedor.email }}">{{ proveedor.email }}</a>
+      </td>
+      <td>{{ proveedor.provincia }}</td>
+    </tr>
+  </tbody>
+</table>

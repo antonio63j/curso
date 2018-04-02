@@ -1,38 +1,34 @@
 import { Injectable } from '@angular/core';
+import { ProveedorModelo } from './proveedor-modelo';
 
 @Injectable()
 export class ProveedoresService {
-  constructor() { }
-  
-  getVersion() {
-    return 'version 1.0.1';
+  proveedores: ProveedorModelo[] = [];
+
+  constructor() {
+    this.addProveedor(
+      new ProveedorModelo('Telefónica',
+        'Mayor 2',
+        'Madrid',
+        'info@telefonica.com',
+        '1123'));
+    this.addProveedor(new ProveedorModelo(
+        'Iberdrola',
+        'Príncipe de Vergara, 200',
+        'Bilbao',
+        'info@iberdrola.com',
+        '2222'));
   }
 
-  proveedores: any = [{
-    nombre: 'Telefónica',
-    cif: 'B12345678',
-    direccion: 'Paseo de la Castellana, 100',
-    cp: '28.010',
-    localidad: 'Madrid',
-    provincia: 'Madrid',
-    telefono: 911111111,
-    email: 'info@telefonica.com',
-    contacto: 'Juan Pérez' },
+  getVersion() {
+    return 'version 1.0.3';
+  }
 
-    { nombre: 'Iberdrola',
-    cif: 'B87654321',
-    direccion: 'Príncipe de Vergara, 200',
-    cp: '28.015',
-    localidad: 'Madrid',
-    provincia: 'Madrid',
-    telefono: 922222222,
-    email: 'info@iberdrola.com',
-    contacto: 'Laura Martínez' } ]
-
-
- getProviders() {
+  getProveedores() {
     return this.proveedores;
   }
 
-
+  addProveedor(proveedor: ProveedorModelo): void {
+    this.proveedores.push(proveedor);
+  }
 }
