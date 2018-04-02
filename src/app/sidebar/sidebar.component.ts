@@ -26,6 +26,8 @@ export const ROUTES: RouteInfo[] = [
     { path: 'TestServicioProveedores', title: 'Servicio proveedores', icon: 'pe-7s-news-paper', class: '' },
     { path: 'AppDestroy', title: 'Destrucción de servicio local', icon: 'pe-7s-news-paper', class: '' },
     { path: 'presupuestosprincipal', title: 'Modulo Presupuestos', icon: 'pe-7s-news-paper', class: '' },
+    { path: 'proveedoreshome', title: 'Modulo Proveedores', icon: 'pe-7s-news-paper', class: '' },
+
   ];
 
 @Component({

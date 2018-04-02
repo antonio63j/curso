@@ -43,6 +43,8 @@ const routes: Routes = [
   {path: 'TextSnippetComponent', component: TextSnippetComponent},
   {path: 'AppDestroy', component: AppDestroy},
   {path: 'presupuestosprincipal', loadChildren: './presupuestos/presupuestos.module#PresupuestosModule'},
+  {path: 'proveedoreshome', loadChildren: './proveedores/proveedores.module#ProveedoresModule'},
+
   {path: '**', redirectTo: 'fechas', pathMatch: 'full'},
 
 ];
