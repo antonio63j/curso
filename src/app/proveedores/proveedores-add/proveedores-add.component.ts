@@ -11,8 +11,8 @@ import {ProveedoresService} from '../proveedores.service';
 })
 export class ProveedoresAddComponent implements OnInit {
 
-  provincias: string[] = [ 'Álava','Albacete','Alicante','Almería','Asturias',
-   'Valladolid', 'Vizcaya', 'Zamora','Zaragoza'];
+  provincias: string[] = [ 'Álava', 'Albacete', 'Alicante', 'Almería', 'Asturias',
+   'Valladolid', 'Vizcaya', 'Zamora', 'Zaragoza'];
   modeloProveedor: ProveedorModelo;
 
   constructor(private proveedorServicio: ProveedoresService,

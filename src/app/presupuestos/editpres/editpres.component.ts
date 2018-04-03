@@ -10,7 +10,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 })
 export class EditpresComponent implements OnInit {
 
-  presupuestoForm: FormGroup;
+ // presupuestoForm: FormGroup;
   presupuesto: any;
   base: any;
   tipo: any;

@@ -11,6 +11,7 @@ import { ProveedoresHomeComponent } from './proveedores-home/proveedores-home.co
 import { ProveedoresAddComponent } from './proveedores-add/proveedores-add.component';
 import { ProveedoresHeaderComponent } from './proveedores-header/proveedores-header.component';
 import { FormsModule } from '@angular/forms';
+import { ProveedoresEditComponent } from './proveedores-edit/proveedores-edit.component';
 
 @NgModule({
   imports: [
@@ -22,7 +23,8 @@ import { FormsModule } from '@angular/forms';
   declarations: [
     ProveedoresHomeComponent,
     ProveedoresAddComponent,
-    ProveedoresHeaderComponent],
+    ProveedoresHeaderComponent,
+    ProveedoresEditComponent],
   providers: [
     // ProveedoresService
   ]
