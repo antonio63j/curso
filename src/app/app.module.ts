@@ -43,7 +43,6 @@ import { DirectivamenuDirective } from './directivamenu.directive';
 import { TestdirectivamenuComponent } from './testdirectivamenu/testdirectivamenu.component';
 import { UsodirectivainputhijoComponent } from './usodirectivainputhijo/usodirectivainputhijo.component';
 import { UsodirectivainputpadreComponent } from './usodirectivainputpadre/usodirectivainputpadre.component';
-import { TestproveedoresComponent } from './testproveedores/testproveedores.component';
 import { UsoDirectivaRainbowComponent } from './uso-directiva-rainbow/uso-directiva-rainbow.component';
 import { UsoDirectivaConfirmComponent } from './uso-directiva-confirm/uso-directiva-confirm.component';
 import { TextSnippetComponent } from './uso-directiva-test-snippets/uso-directiva-test-snippets.component';
@@ -70,7 +69,6 @@ import { AppDestroy } from './testdestroy/testdestroy.component';
     TestdirectivamenuComponent,
     UsodirectivainputpadreComponent,
     UsodirectivainputhijoComponent,
-    TestproveedoresComponent,
     RainbowDirectiveDirective,
     UsoDirectivaRainbowComponent,
     ConfirmDirectiveDirective,

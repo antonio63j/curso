@@ -49,9 +49,9 @@ export class ProveedoresService {
   }
 
   updateProveedor(proveedor: ProveedorModelo): void {
-    // let proveedorOld: ProveedorModelo;
-    // proveedorOld = this.proveedores.find(this.buscaProveedorByEmail, proveedor.email);
-    // const index = this.proveedores.indexOf(proveedorOld);
-    // this.proveedores[index] = proveedor;
+     let proveedorOld: ProveedorModelo;
+     proveedorOld = this.proveedores.find(this.buscaProveedorByEmail, proveedor.email);
+     const index = this.proveedores.indexOf(proveedorOld);
+     this.proveedores[index] = proveedor;
   }
 }

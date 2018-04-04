@@ -14,7 +14,6 @@ export class ProveedoresEditComponent implements OnInit {
   modeloProveedor: ProveedorModelo;
   proveedor: ProveedorModelo;
   idEmail: any;
-  codigoProvincia: string;
 
   provincias: {}[] = [
     {codigo: 'MA', descripcion: 'MADRID'},
@@ -30,9 +29,8 @@ export class ProveedoresEditComponent implements OnInit {
     this.activatedRouter.params
       .subscribe(parametros => {
         this.idEmail = parametros['email'];
-        this.modeloProveedor = this.proveedoresService.getProveedor(this.idEmail);
-       // this.cargaModeloProveedor();
-        this.codigoProvincia = this.modeloProveedor.provincia;
+        this.proveedor = this.proveedoresService.getProveedor(this.idEmail);
+        this.cargaModeloProveedor();
       });
   }
 

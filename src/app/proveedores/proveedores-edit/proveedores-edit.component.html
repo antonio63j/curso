@@ -4,6 +4,12 @@
     <form (ngSubmit)="onSubmit(formpro)" #formpro="ngForm" autocomplete="on">
         <div class="form-group">
           <label for="nombre">Nombre</label>
+          <i class="fa fa-check-circle check"
+               *ngIf="nombre.valid"></i>
+          <i class="fa fa-exclamation-circle uncheck"
+               *ngIf="nombre.invalid &&
+               nombre.touched"></i>
+
           <input type="text"
                  class="form-control"
                  id="nombre"
@@ -79,7 +85,7 @@
 
       <hr>
       <h4> Mostramos el estado del campo Correo Electrónico</h4>
-      <pre> Estado Dirty: {{formpro.controls.email.dirty }}</pre>
+      <pre> Estado Dirty: {{email.dirty }}</pre>
       <pre> Estado Pristine: {{formpro.controls.email.pristine }}</pre>
       <pre> Estado Touched: {{formpro.controls.email.touched }}</pre>
       <pre> Estado Valid: {{formpro.controls.email.valid }}</pre>
