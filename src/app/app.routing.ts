@@ -53,7 +53,9 @@ const routes: Routes = [
   imports: [
     CommonModule,
     BrowserModule,
-    RouterModule.forRoot(routes, {enableTracing: true, })
+    // RouterModule.forRoot(routes, {enableTracing: true, })
+    RouterModule.forRoot(routes)
+
   ],
   exports: [RouterModule
   ],

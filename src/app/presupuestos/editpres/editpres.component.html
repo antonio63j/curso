@@ -1,7 +1,7 @@
 <div class="row">
   <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset 2">
     <h3>Editar Presupuesto</h3>
-    <form [formGroup]="presupuestoForm" (ngSubmit)="onSubmit()">
+    <form [formGroup]="presupuestoForm" (ngSubmit)="onSubmit()" autocomplete="on">
         <div class="form-group">
           <label for="proveedor">Proveedor</label>
           <i class="fa fa-check-circle check"
@@ -110,14 +110,14 @@
                  [(ngModel)]="presupuestoForm.value.total"
                  [attr.disabled]="true">
         </div>
+        <p class="alert alert-danger" *ngIf="!presupuestoForm.valid">
+          Por favor complete todos los campos
+        </p>
         <button type="submit"
               class="btn btn-primary"
               [disabled]="!presupuestoForm.valid"
               >Guardar Cambios</button>
         <a class="btn btn-danger" routerLink="/presupuestosprincipal">Salir</a>
-        <p class="alert alert-danger" *ngIf="!presupuestoForm.valid">
-          Por favor complete todos los campos
-        </p>
     </form>
     <hr>
    </div>

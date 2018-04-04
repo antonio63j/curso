@@ -3,7 +3,7 @@ import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 
 import { ProveedorModelo} from '../proveedor-modelo';
-import {ProveedoresService} from '../proveedores.service';
+import { ProveedoresService } from '../proveedores.service';
 @Component({
   selector: 'app-proveedores-add',
   templateUrl: './proveedores-add.component.html',

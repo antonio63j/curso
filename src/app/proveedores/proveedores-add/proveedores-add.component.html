@@ -1,7 +1,7 @@
 <div class="row">
   <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset 2">
-    <h2>Añadir proveedor (formulario Template-Driven)</h2>
-    <form (ngSubmit)="onSubmit(formpro)" #formpro="ngForm">
+    <h3>Añadir proveedor (formulario Template-Driven)</h3>
+    <form (ngSubmit)="onSubmit(formpro)" #formpro="ngForm" autocomplete="on">
         <div class="form-group">
           <label for="nombre">Nombre</label>
           <input type="text"
@@ -67,14 +67,14 @@
           </p>
 
         </div>
+        <p class="alert alert-danger "
+           *ngIf="!formpro.form.valid">Por favor complete todos los campos
+        </p>
         <button type="submit"
                 class="btn btn-success"
                 [disabled]="!formpro.form.valid">Añadir Proveedor
         </button>
-        <p class="alert alert-danger "
-           *ngIf="!formpro.form.valid">Por favor complete todos los campos
-        </p>
-
+        <a class="btn btn-danger" routerLink="/proveedoreshome">Salir</a>
       <hr>
       <h4> Mostramos el estado del campo Correo Electrónico</h4>
       <pre> Estado Dirty: {{formpro.controls.email.dirty }}</pre>

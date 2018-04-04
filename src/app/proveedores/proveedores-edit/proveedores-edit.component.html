@@ -1,14 +1,16 @@
 <div class="row">
   <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset 2">
-    <form (ngSubmit)="onSubmit()" #formprovee="ngForm">
+    <h2>Modifición proveedor (formulario Template-Driven)</h2>
+    <form (ngSubmit)="onSubmit(formpro)" #formpro="ngForm" autocomplete="on">
         <div class="form-group">
-          <label>Nombre</label>
+          <label for="nombre">Nombre</label>
           <input type="text"
                  class="form-control"
                  id="nombre"
-                 name="nombre"
                  required
-                 ngModel>
+                 [(ngModel)]="modeloProveedor.nombre" 
+                 name="nombre"
+                 #nombre="ngModel">
         </div>
         <div class="form-group">
           <label>C.I.F.</label>
@@ -16,22 +18,35 @@
                  class="form-control"
                  id="cif"
                  name="cif"
-                 required
-                 ngModel>
+                 [(ngModel)]="modeloProveedor.cif"
+          >
         </div>
         <div class="form-group">
-          <label for ="Provincia"></label>
+          <label>Dirección</label>
+          <input type="text"
+                 class="form-control"
+                 id="direccion"
+                 name="direccion"
+                 required
+                 [(ngModel)]="modeloProveedor.direccion"
+                 #direccion="ngModel">
+        </div>
+
+        <div class="form-group">
+          <label for ="provincia">Provincia</label>
           <select class="form-control"
                    id="provincia"
-                   ngModel
+                   [(ngModel)]="modeloProveedor.provincia"
                    required
-                   name="provincia">
-                   <option value="">Seleccione la provincia</option>
+                   name="provincia"
+                   #provincia="ngModel">
+                   <option value="" [disabled]="true">Seleccione la provincia</option>
                    <option *ngFor="let provincia of provincias"
-                     [value]="provincia">{{provincia}}
+                     [value]="provincia.codigo">{{provincia.descripcion}}
                    </option>
           </select>
         </div>
+
         <div class="form-group">
           <label for="email">Correo Electrónico</label>
           <i class="fa fa-check-circle check"
@@ -43,7 +58,7 @@
             type="text"
             class="form-control"
             id="email"
-            ngModel
+            [(ngModel)]="modeloProveedor.email"
             name="email"
             required
             email #email="ngModel">
@@ -52,13 +67,15 @@
           </p>
 
         </div>
+        <p class="alert alert-danger "
+           *ngIf="!formpro.form.valid">Por favor complete todos los campos
+        </p>
         <button type="submit"
                 class="btn btn-success"
-                [disabled]="!formpro.valid">Actualizar proveedor
+                [disabled]="!formpro.form.valid">Actualizar
         </button>
-        <p class="alert alert-danger "
-           *ngIf="!formpro.valid">Por favor complete todos los campos
-        </p>
+        <a class="btn btn-danger" routerLink="/proveedoreshome">Salir</a>
+
 
       <hr>
       <h4> Mostramos el estado del campo Correo Electrónico</h4>

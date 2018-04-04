@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import {Headers, Http, Response} from '@angular/http';
-//import { Observable} from 'rxjs/Rx';
+// import { Observable} from 'rxjs/Rx';
 import 'rxjs/Rx';
 
 @Injectable()
@@ -17,10 +17,10 @@ export class PresupuestosService {
     return this.http.post( this.presURL, newpres, {headers})
      .map( res => {
        console.log(res.json());
-       return res.json(); })
+       return res.json(); });
     }
 
-  //getPresupuestos (): Observable<Response> {
+  // getPresupuestos (): Observable<Response> {
   getPresupuestos () {
    return this.http.get(this.presURL)
     .map( resultado => resultado.json());

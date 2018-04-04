@@ -10,7 +10,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 })
 export class EditpresComponent implements OnInit {
 
- // presupuestoForm: FormGroup;
+  presupuestoForm: FormGroup;
   presupuesto: any;
   base: any;
   tipo: any;
@@ -27,7 +27,7 @@ export class EditpresComponent implements OnInit {
         .subscribe( parametros => {
           this.id = parametros['id'];
           this.presupuestoService.getPresupuesto( this.id)
-            .subscribe( unPresupuesto => this.presupuesto = unPresupuesto)
+            .subscribe( unPresupuesto => this.presupuesto = unPresupuesto);
         });
   }
 

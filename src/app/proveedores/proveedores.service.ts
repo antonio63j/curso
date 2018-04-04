@@ -10,13 +10,13 @@ export class ProveedoresService {
     this.addProveedor(
       new ProveedorModelo('Telefónica',
         'Mayor 2',
-        'Madrid',
+        'MA',
         'info@telefonica.com',
         '1123'));
     this.addProveedor(new ProveedorModelo(
       'Iberdrola',
       'Príncipe de Vergara, 200',
-      'Bilbao',
+      'BI',
       'info@iberdrola.com',
       '2222'));
   }
@@ -49,8 +49,9 @@ export class ProveedoresService {
   }
 
   updateProveedor(proveedor: ProveedorModelo): void {
-    proveedor = this.proveedores.find(this.buscaProveedorByEmail, proveedor.email);
-    const index = this.proveedores.indexOf(proveedor);
-    this.proveedores[index] = proveedor;
+    // let proveedorOld: ProveedorModelo;
+    // proveedorOld = this.proveedores.find(this.buscaProveedorByEmail, proveedor.email);
+    // const index = this.proveedores.indexOf(proveedorOld);
+    // this.proveedores[index] = proveedor;
   }
 }
