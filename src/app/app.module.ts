@@ -48,6 +48,7 @@ import { UsoDirectivaConfirmComponent } from './uso-directiva-confirm/uso-direct
 import { TextSnippetComponent } from './uso-directiva-test-snippets/uso-directiva-test-snippets.component';
 import { TestDestroy } from './testdestroy/testdestroy.component';
 import { AppDestroy } from './testdestroy/testdestroy.component';
+import { MostrarFuenteDirective } from './doc-fuentes/mostrar-fuente.directive';
 
 @NgModule({
   declarations: [
@@ -76,8 +77,8 @@ import { AppDestroy } from './testdestroy/testdestroy.component';
     TextSnippetDirective,
     TextSnippetComponent,
     TestDestroy,
-    AppDestroy
-
+    AppDestroy,
+    MostrarFuenteDirective
   ],
   imports: [
     BrowserModule,
