@@ -11,6 +11,7 @@ import { AppRoutingModule } from './app.routing';
 import { NavbarModule } from './shared/navbar/navbar.module';
 import { FooterModule } from './shared/footer/footer.module';
 import { SidebarModule } from './sidebar/sidebar.module';
+import { DocFuentesModule } from './doc-fuentes/doc-fuentes.module';
 import { HighlightModule } from 'ngx-highlightjs';
 // import { LbdModule } from './lbd/lbd.module';
 
@@ -35,6 +36,8 @@ import { Pipeeuro2Pipe } from './mispipes/pipeeuro2.pipe';
 import { EjpropertybindingComponent } from './ejpropertybinding/ejpropertybinding.component';
 import { EjeventbindingComponent } from './ejeventbinding/ejeventbinding.component';
 import { Ej2waybindingComponent } from './ej2waybinding/ej2waybinding.component';
+import { DocEj2waybindingComponent} from './ej2waybinding/doc-ej2waybinding.component';
+
 import { EjdirectivangifComponent } from './ejdirectivangif/ejdirectivangif.component';
 import { EjdirectivangstyleComponent } from './ejdirectivangstyle/ejdirectivangstyle.component';
 import { EjdirectivangclassComponent } from './ejdirectivangclass/ejdirectivangclass.component';
@@ -48,7 +51,6 @@ import { UsoDirectivaConfirmComponent } from './uso-directiva-confirm/uso-direct
 import { TextSnippetComponent } from './uso-directiva-test-snippets/uso-directiva-test-snippets.component';
 import { TestDestroy } from './testdestroy/testdestroy.component';
 import { AppDestroy } from './testdestroy/testdestroy.component';
-import { MostrarFuenteDirective } from './doc-fuentes/mostrar-fuente.directive';
 
 @NgModule({
   declarations: [
@@ -62,6 +64,8 @@ import { MostrarFuenteDirective } from './doc-fuentes/mostrar-fuente.directive';
     EjpropertybindingComponent,
     EjeventbindingComponent,
     Ej2waybindingComponent,
+    DocEj2waybindingComponent,
+
     EjdirectivangifComponent,
     EjdirectivangstyleComponent,
     EjdirectivangclassComponent,
@@ -77,8 +81,7 @@ import { MostrarFuenteDirective } from './doc-fuentes/mostrar-fuente.directive';
     TextSnippetDirective,
     TextSnippetComponent,
     TestDestroy,
-    AppDestroy,
-    MostrarFuenteDirective
+    AppDestroy
   ],
   imports: [
     BrowserModule,
@@ -90,7 +93,8 @@ import { MostrarFuenteDirective } from './doc-fuentes/mostrar-fuente.directive';
     RouterModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    HighlightModule.forRoot(),
+    DocFuentesModule,
+    HighlightModule.forRoot()
 
     // LbdModule
   ],

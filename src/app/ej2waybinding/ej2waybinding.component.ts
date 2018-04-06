@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Http, Response } from '@angular/http';
-
+import { DocEj2waybindingComponent } from './doc-ej2waybinding.component';
 @Component({
   selector: 'app-ej2waybinding',
   templateUrl: './ej2waybinding.component.html',

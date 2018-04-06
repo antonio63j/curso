@@ -12,21 +12,25 @@ import { ProveedoresAddComponent } from './proveedores-add/proveedores-add.compo
 import { ProveedoresHeaderComponent } from './proveedores-header/proveedores-header.component';
 import { FormsModule } from '@angular/forms';
 import { ProveedoresEditComponent } from './proveedores-edit/proveedores-edit.component';
+import { DocFuentesTestComponent } from '../doc-fuentes/doc-fuentes-test/doc-fuentes-test.component';
 import { DocFuentesComponent } from '../doc-fuentes/doc-fuentes.component';
-
+import { HighlightModule } from 'ngx-highlightjs';
+ 
 @NgModule({
   imports: [
     RouterModule,
     FormsModule,
     CommonModule,
-    ProveedoresRoutingModule
+    ProveedoresRoutingModule,
+    HighlightModule.forRoot()
   ],
   declarations: [
     ProveedoresHomeComponent,
     ProveedoresAddComponent,
     ProveedoresHeaderComponent,
     ProveedoresEditComponent,
-    DocFuentesComponent
+    DocFuentesComponent,
+    DocFuentesTestComponent
     ],
   providers: [
     // ProveedoresService

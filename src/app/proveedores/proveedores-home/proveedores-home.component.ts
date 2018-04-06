@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
 import { ProveedoresService } from '../proveedores.service';
-import { FuentesDef } from '../../doc-fuentes/fuentes-def';
 
 @Component({
   selector: 'app-proveedores-home',
@@ -14,14 +12,7 @@ export class ProveedoresHomeComponent implements OnInit {
   mensaje: string;
   proveedores: any;
 
-  // Para documentacion
-  fuentesDoc: FuentesDef[];
-
-
   constructor(private proveedoresService: ProveedoresService) {
-    this.fuentesDoc = [
-      new FuentesDef ('f1.txt', 'descripcion fichero 1')
-    ];
   }
 
   ngOnInit() {

@@ -1,24 +1,21 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { Http, Response } from '@angular/http';
+import { Component, Input } from '@angular/core';
 
-import { FuentesDef } from './fuentes-def';
 
 @Component({
-  selector: 'app-doc-fuentes',
-  templateUrl: './doc-fuentes.component.html',
-  styleUrls: ['./doc-fuentes.component.scss']
+  selector: 'doc-fuentes',
+  template: `
+  <h3>Códigos fuente</h3>
+  <ul>
+      <li *ngFor="let item of items">
+      {{item.title}}({{item.file}})
+      <pre><code highlight [code]="item.code">Template hijo</code></pre>
+      </li>
+  </ul>
+`
 })
 
-export class DocFuentesComponent implements OnInit {
-  @Input () fichero: string;
-  @Input () descripcion: string;
-
-  constructor(private http: Http) {
-
-   }
-
-  ngOnInit() {
-    console.log ('fichero:' + this.fichero);
-  }
-
+export class DocFuentesComponent {
+  @Input()
+  items: any[] = [];
 }
+
