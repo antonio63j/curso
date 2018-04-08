@@ -44,6 +44,13 @@ export class ProveedoresService {
     this.proveedores.push(proveedor);
   }
 
+  deleteProveedor (email: string ): void {
+    let proveedoresAux: ProveedorModelo[];
+    proveedoresAux = this.proveedores.filter(
+      provee => provee.email !== email);
+    this.proveedores = proveedoresAux;
+  }
+
   buscaProveedorByEmail(provee) {
     return (provee.email === this);
   }

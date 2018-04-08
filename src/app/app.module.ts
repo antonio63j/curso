@@ -28,12 +28,15 @@ import { LoginComponent } from './login/login.component';
 import { RegistroComponent } from './registro/registro.component';
 
 import { CopyrightComponent } from './copyright/copyright.component';
+import { DocCopyrightComponent } from './copyright/doc-copyright.component';
 import { FechaactualComponent } from './fechaactual/fechaactual.component';
 import { ViewmodeloComponent } from './viewmodelo/viewmodelo.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { PipeeuroPipe } from './mispipes/pipeeuro.pipe';
 import { Pipeeuro2Pipe } from './mispipes/pipeeuro2.pipe';
 import { EjpropertybindingComponent } from './ejpropertybinding/ejpropertybinding.component';
+import { DocEjpropertybindingComponent } from './ejpropertybinding/doc-ejpropertybinding.component';
+
 import { EjeventbindingComponent } from './ejeventbinding/ejeventbinding.component';
 import { Ej2waybindingComponent } from './ej2waybinding/ej2waybinding.component';
 import { DocEj2waybindingComponent} from './ej2waybinding/doc-ej2waybinding.component';
@@ -56,6 +59,7 @@ import { AppDestroy } from './testdestroy/testdestroy.component';
   declarations: [
     AppComponent,
     CopyrightComponent,
+    DocCopyrightComponent,
     FechaactualComponent,
     ViewmodeloComponent,
     PipeeuroPipe,
@@ -63,6 +67,7 @@ import { AppDestroy } from './testdestroy/testdestroy.component';
     InicioComponent,
     EjpropertybindingComponent,
     EjeventbindingComponent,
+    DocEjpropertybindingComponent,
     Ej2waybindingComponent,
     DocEj2waybindingComponent,
 

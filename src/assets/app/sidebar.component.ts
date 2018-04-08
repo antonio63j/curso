@@ -23,8 +23,11 @@ export const ROUTES: RouteInfo[] = [
     { path: 'Testdirectivarainbow', title: 'Construcción directiva', icon: 'pe-7s-news-paper', class: '' },
     { path: 'UsoDirectivaConfirmComponent', title: 'Construcción direcitva', icon: 'pe-7s-news-paper', class: ''},
     { path: 'TextSnippetComponent', title: 'Construcción directiva con @Output', icon: 'pe-7s-news-paper', class: '' },
-    { path: 'TestServicioProveedores', title: 'Servicio proveedores', icon: 'pe-7s-news-paper', class: '' },
+    // { path: 'TestServicioProveedores', title: 'Servicio proveedores', icon: 'pe-7s-news-paper', class: '' },
     { path: 'AppDestroy', title: 'Destrucción de servicio local', icon: 'pe-7s-news-paper', class: '' },
+    { path: 'presupuestosprincipal', title: 'Froms Reactivos', icon: 'pe-7s-news-paper', class: '' },
+    { path: 'proveedoreshome', title: 'Forms Template-driven', icon: 'pe-7s-news-paper', class: '' },
+
   ];
 
 @Component({

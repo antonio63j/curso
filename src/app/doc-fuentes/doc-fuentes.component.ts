@@ -4,13 +4,24 @@ import { Component, Input } from '@angular/core';
 @Component({
   selector: 'doc-fuentes',
   template: `
-  <h3>Códigos fuente</h3>
-  <ul>
-      <li *ngFor="let item of items">
-      {{item.title}}({{item.file}})
-      <pre><code highlight [code]="item.code">Template hijo</code></pre>
-      </li>
-  </ul>
+
+  <div>
+      <div *ngFor="let item of items">
+        <div *ngIf = "item.aread !== undefined">
+          <h3>Despcripción del módulo</h3>
+          <div class="container-demo">
+            <div class="container-demo-texto">
+              <pre><code highlight [code]="item.codeAread"></code></pre>
+            </div>
+          </div> 
+        </div>
+      </div>
+      <h3>Códigos fuente</h3>
+      <div *ngFor="let item of items">
+        {{item.title}}({{item.file}})
+        <pre><code highlight [code]="item.code">Template hijo</code></pre>
+      </div>
+  </div>
 `
 })
 

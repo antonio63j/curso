@@ -3,7 +3,6 @@ import { CommonModule, } from '@angular/common';
 import { BrowserModule  } from '@angular/platform-browser';
 import { Routes, RouterModule } from '@angular/router';
 
-
 import { InicioComponent } from './inicio/inicio.component';
 import { CopyrightComponent } from './copyright/copyright.component';
 import { FechaactualComponent } from './fechaactual/fechaactual.component';
@@ -17,14 +16,13 @@ import { EjdirectivangclassComponent } from './ejdirectivangclass/ejdirectivangc
 import { EjdirectivangforComponent } from './ejdirectivangfor/ejdirectivangfor.component';
 import { TestdirectivamenuComponent } from './testdirectivamenu/testdirectivamenu.component';
 import { UsodirectivainputpadreComponent } from './usodirectivainputpadre/usodirectivainputpadre.component';
-import { TestproveedoresComponent } from './testproveedores/testproveedores.component';
 import { UsoDirectivaRainbowComponent } from './uso-directiva-rainbow/uso-directiva-rainbow.component';
 import { UsoDirectivaConfirmComponent } from './uso-directiva-confirm/uso-directiva-confirm.component';
 import { TextSnippetComponent } from './uso-directiva-test-snippets/uso-directiva-test-snippets.component';
 import { AppDestroy } from './testdestroy/testdestroy.component';
 
 const routes: Routes = [
-  {path: '', component: ViewmodeloComponent},
+  {path: '', redirectTo: 'fechas', pathMatch: 'full'},
   {path: 'home', component: InicioComponent},
   {path: 'copyright', component: CopyrightComponent},
   {path: 'fechas', component: FechaactualComponent},
@@ -39,19 +37,13 @@ const routes: Routes = [
   {path: 'TestdirectivamenuComponent' , component: TestdirectivamenuComponent},
   {path: 'Usodirectivainput' , component: UsodirectivainputpadreComponent},
   {path: 'Testdirectivarainbow', component: UsoDirectivaRainbowComponent},
-  {path: 'TestServicioProveedores', component: TestproveedoresComponent},
   {path: 'UsoDirectivaConfirmComponent', component: UsoDirectivaConfirmComponent},
   {path: 'TextSnippetComponent', component: TextSnippetComponent},
   {path: 'AppDestroy', component: AppDestroy},
-  {path: '**', component: InicioComponent},
+  {path: 'presupuestosprincipal', loadChildren: './presupuestos/presupuestos.module#PresupuestosModule'},
+  {path: 'proveedoreshome', loadChildren: './proveedores/proveedores.module#ProveedoresModule'},
 
-  // {path: 'testproveedores',component: TestproveedoresComponent},
-  // {path: 'directivainput',component: UsodirectivainputpadreComponent},
-  // {path: 'addprovee', component: AddproveeComponent},
-  // {path: 'addpres', component: AddpresComponent},
-  // {path: 'listapresupuestos', component: ListapresComponent},
-  // {path: 'editpres/:id', component: EditpresComponent},
-  // {path: 'registro', component: RegistroComponent},
+  {path: '**', redirectTo: 'fechas', pathMatch: 'full'},
 
 ];
 
@@ -59,9 +51,11 @@ const routes: Routes = [
   imports: [
     CommonModule,
     BrowserModule,
+    // RouterModule.forRoot(routes, {enableTracing: true, })
     RouterModule.forRoot(routes)
+
   ],
-  exports: [
+  exports: [RouterModule
   ],
 })
 export class AppRoutingModule { }

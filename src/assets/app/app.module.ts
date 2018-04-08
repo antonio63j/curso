@@ -11,6 +11,7 @@ import { AppRoutingModule } from './app.routing';
 import { NavbarModule } from './shared/navbar/navbar.module';
 import { FooterModule } from './shared/footer/footer.module';
 import { SidebarModule } from './sidebar/sidebar.module';
+import { DocFuentesModule } from './doc-fuentes/doc-fuentes.module';
 import { HighlightModule } from 'ngx-highlightjs';
 // import { LbdModule } from './lbd/lbd.module';
 
@@ -19,6 +20,7 @@ import { RainbowDirectiveDirective } from './misdirectivas/rainbow-directive.dir
 import { ConfirmDirectiveDirective } from './misdirectivas/confirm-directive.directive';
 import { TextSnippetDirective } from './misdirectivas/test-snippets.directive';
 // importacion de servicios
+import { ProveedoresService } from './proveedores/proveedores.service';
 
 // importacion de componentes
 import { AppComponent } from './app.component'; 
@@ -26,14 +28,19 @@ import { LoginComponent } from './login/login.component';
 import { RegistroComponent } from './registro/registro.component';
 
 import { CopyrightComponent } from './copyright/copyright.component';
+import { DocCopyrightComponent } from './copyright/doc-copyright.component';
 import { FechaactualComponent } from './fechaactual/fechaactual.component';
 import { ViewmodeloComponent } from './viewmodelo/viewmodelo.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { PipeeuroPipe } from './mispipes/pipeeuro.pipe';
 import { Pipeeuro2Pipe } from './mispipes/pipeeuro2.pipe';
 import { EjpropertybindingComponent } from './ejpropertybinding/ejpropertybinding.component';
+import { DocEjpropertybindingComponent } from './ejpropertybinding/doc-ejpropertybinding.component';
+
 import { EjeventbindingComponent } from './ejeventbinding/ejeventbinding.component';
 import { Ej2waybindingComponent } from './ej2waybinding/ej2waybinding.component';
+import { DocEj2waybindingComponent} from './ej2waybinding/doc-ej2waybinding.component';
+
 import { EjdirectivangifComponent } from './ejdirectivangif/ejdirectivangif.component';
 import { EjdirectivangstyleComponent } from './ejdirectivangstyle/ejdirectivangstyle.component';
 import { EjdirectivangclassComponent } from './ejdirectivangclass/ejdirectivangclass.component';
@@ -42,7 +49,6 @@ import { DirectivamenuDirective } from './directivamenu.directive';
 import { TestdirectivamenuComponent } from './testdirectivamenu/testdirectivamenu.component';
 import { UsodirectivainputhijoComponent } from './usodirectivainputhijo/usodirectivainputhijo.component';
 import { UsodirectivainputpadreComponent } from './usodirectivainputpadre/usodirectivainputpadre.component';
-import { TestproveedoresComponent } from './testproveedores/testproveedores.component';
 import { UsoDirectivaRainbowComponent } from './uso-directiva-rainbow/uso-directiva-rainbow.component';
 import { UsoDirectivaConfirmComponent } from './uso-directiva-confirm/uso-directiva-confirm.component';
 import { TextSnippetComponent } from './uso-directiva-test-snippets/uso-directiva-test-snippets.component';
@@ -53,6 +59,7 @@ import { AppDestroy } from './testdestroy/testdestroy.component';
   declarations: [
     AppComponent,
     CopyrightComponent,
+    DocCopyrightComponent,
     FechaactualComponent,
     ViewmodeloComponent,
     PipeeuroPipe,
@@ -60,7 +67,10 @@ import { AppDestroy } from './testdestroy/testdestroy.component';
     InicioComponent,
     EjpropertybindingComponent,
     EjeventbindingComponent,
+    DocEjpropertybindingComponent,
     Ej2waybindingComponent,
+    DocEj2waybindingComponent,
+
     EjdirectivangifComponent,
     EjdirectivangstyleComponent,
     EjdirectivangclassComponent,
@@ -69,7 +79,6 @@ import { AppDestroy } from './testdestroy/testdestroy.component';
     TestdirectivamenuComponent,
     UsodirectivainputpadreComponent,
     UsodirectivainputhijoComponent,
-    TestproveedoresComponent,
     RainbowDirectiveDirective,
     UsoDirectivaRainbowComponent,
     ConfirmDirectiveDirective,
@@ -78,7 +87,6 @@ import { AppDestroy } from './testdestroy/testdestroy.component';
     TextSnippetComponent,
     TestDestroy,
     AppDestroy
-
   ],
   imports: [
     BrowserModule,
@@ -90,11 +98,13 @@ import { AppDestroy } from './testdestroy/testdestroy.component';
     RouterModule,
     AppRoutingModule,
     ReactiveFormsModule,
+    DocFuentesModule,
     HighlightModule.forRoot()
 
     // LbdModule
   ],
   providers: [
+    ProveedoresService
   ],
   bootstrap: [AppComponent]
 })
