@@ -1,27 +1,21 @@
 import { Component, OnInit } from '@angular/core';
-import { Http, Response } from '@angular/http';
 
 @Component({
   selector: 'app-uso-directiva-test-snippets',
   templateUrl: './uso-directiva-test-snippets.component.html',
+  styleUrls: ['./uso-directiva-test-snippets.component.css'],
   styles: [`
     em {
       color: Green;
       font-style: normal;
     }
   `]
+
 })
 export class TextSnippetComponent {
   codedi; codehtml; codets: string;
 
-  constructor(private http: Http) {
-    this.http.get('assets/app/test-snippets.directive.ts')
-      .subscribe(data => { this.codedi = data.text(); });
-    this.http.get('assets/app/uso-directiva-test-snippets.component.html')
-      .subscribe(data => { this.codehtml = data.text(); });
-    this.http.get('assets/app/uso-directiva-test-snippets.component.ts')
-      .subscribe(data => { this.codets = data.text(); });
-  }
+  constructor() {}
   movieQuote = `
       Didn’t see the first shark for about a half-hour. Tiger. 13-footer.
       You know how you know that in the water, Chief? You can tell by lookin’

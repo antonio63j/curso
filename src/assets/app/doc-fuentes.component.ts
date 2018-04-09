@@ -14,10 +14,8 @@ import { Component, Input } from '@angular/core';
       </div>
       <h3>Códigos fuente</h3>
       <div *ngFor="let item of items">
-        {{item.title}}({{item.file}})
-        <h4>
+        <h4>{{item.title}}({{item.file}})</h4>
         <pre><code highlight [code]="item.code"></code></pre>
-        </h4>
       </div>
   </div>
 `

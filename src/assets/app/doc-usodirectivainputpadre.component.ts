@@ -22,7 +22,7 @@ export class DocUsodirectivainputpadreComponent implements OnInit {
     code: '',
     file: 'assets/app/usodirectivainputpadre.component.html'
     },
-    { title: 'Componente',
+    { title: 'Componente padre',
       code: '',
       file: 'assets/app/usodirectivainputpadre.component.ts',
       aread: 'assets/app/doc-usodirectivainputpadre.html',
