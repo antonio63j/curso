@@ -1,9 +1,3 @@
-<div class="container-demo">
-  <div class="container-demo-texto">
-    <p>Directiva *NgIf con etiqueta ng-template</p>
-    <p>Two way binding - [(ngModel)]</p>
-  </div>
-  
   <br><app-fechaactual></app-fechaactual><br>
   <label>Nombre y Apellidos</label>
   <input type="text" class="form-control" [(ngModel)]="nombre1" placeholder="Complete su nombre y apellidos">
@@ -26,9 +20,6 @@
 <ng-template #incorrecto>
   <h4>Lo siento, inténtelo de nuevo</h4>
 </ng-template>
-</div>
 
-La vista
-<!-- <pre><code highlight [code] = "codehtml"></code></pre>
-El componente
-<pre><code highlight [code] = "codets"></code></pre> -->
+<app-doc-fuentes-ejdirectivangif></app-doc-fuentes-ejdirectivangif> 
+<router-outlet></router-outlet>

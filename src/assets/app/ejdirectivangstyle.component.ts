@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Http, Response } from '@angular/http';
 
 @Component({
   selector: 'app-ejdirectivangstyle',
@@ -8,17 +7,10 @@ import { Http, Response } from '@angular/http';
 })
 
 export class EjdirectivangstyleComponent implements OnInit {
-  codehtml; codets: string;
-
   puntuacion: number;
   estiloAplicado: any;
 
-  constructor(private http: Http) {
-    this.http.get('assets/app/ejdirectivangstyle.component.html')
-      .subscribe(data => { this.codehtml = data.text(); });
-    this.http.get('assets/app/ejdirectivangstyle.component.ts')
-      .subscribe(data => { this.codets = data.text(); });
-  }
+  constructor() { }
 
   setColor() {
     this.estiloAplicado = {
@@ -29,6 +21,5 @@ export class EjdirectivangstyleComponent implements OnInit {
     return this.puntuacion >= 5 ? 'green' : 'red';
   }
 
-  ngOnInit() {
-  }
+  ngOnInit() { }
 }

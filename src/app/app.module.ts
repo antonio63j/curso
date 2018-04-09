@@ -42,16 +42,30 @@ import { Ej2waybindingComponent } from './ej2waybinding/ej2waybinding.component'
 import { DocEj2waybindingComponent} from './ej2waybinding/doc-ej2waybinding.component';
 
 import { EjdirectivangifComponent } from './ejdirectivangif/ejdirectivangif.component';
+import { DocEjDirectivangifComponent } from './ejdirectivangif/doc-ejdirectivangif.component';
+
 import { EjdirectivangstyleComponent } from './ejdirectivangstyle/ejdirectivangstyle.component';
+import { DocEjDirectivangstyleComponent } from './ejdirectivangstyle/doc-ejdirectivangstyle.component';
+
 import { EjdirectivangclassComponent } from './ejdirectivangclass/ejdirectivangclass.component';
+import { DocEjDirectivangclassComponent } from './ejdirectivangclass/doc-ejdirectivangclass.component';
+
 import { EjdirectivangforComponent } from './ejdirectivangfor/ejdirectivangfor.component';
 import { DirectivamenuDirective } from './directivamenu.directive';
 import { TestdirectivamenuComponent } from './testdirectivamenu/testdirectivamenu.component';
+import { DocTestdirectivamenuComponent } from './testdirectivamenu/doc-testdirectivamenu.component';
+
 import { UsodirectivainputhijoComponent } from './usodirectivainputhijo/usodirectivainputhijo.component';
 import { UsodirectivainputpadreComponent } from './usodirectivainputpadre/usodirectivainputpadre.component';
 import { UsoDirectivaRainbowComponent } from './uso-directiva-rainbow/uso-directiva-rainbow.component';
+import { DocUsodirectivainputpadreComponent } from './usodirectivainputpadre/doc-usodirectivainputpadre.component';
+
+import { DocUsoDirectivaRainbowComponent } from './uso-directiva-rainbow/doc-uso-directiva-rainbow.component';
+
 import { UsoDirectivaConfirmComponent } from './uso-directiva-confirm/uso-directiva-confirm.component';
 import { TextSnippetComponent } from './uso-directiva-test-snippets/uso-directiva-test-snippets.component';
+import { DocTextSnippetComponent } from './uso-directiva-test-snippets/doc-uso-directiva-test-snippets.component';
+
 import { TestDestroy } from './testdestroy/testdestroy.component';
 import { AppDestroy } from './testdestroy/testdestroy.component';
 
@@ -86,7 +100,14 @@ import { AppDestroy } from './testdestroy/testdestroy.component';
     TextSnippetDirective,
     TextSnippetComponent,
     TestDestroy,
-    AppDestroy
+    AppDestroy,
+    DocEjDirectivangifComponent,
+    DocEjDirectivangstyleComponent,
+    DocEjDirectivangclassComponent,
+    DocTestdirectivamenuComponent,
+    DocUsoDirectivaRainbowComponent,
+    DocUsodirectivainputpadreComponent,
+    DocTextSnippetComponent
   ],
   imports: [
     BrowserModule,

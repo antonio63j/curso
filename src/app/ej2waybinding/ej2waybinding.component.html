@@ -1,16 +1,9 @@
-<div class="container-demo">
-    <div class="container-demo-texto">Ejemplo two way binding. Los datos van de la vista hacia el controlador y y del controlador
-        a la vista. Cuando se introduce un numero desde la vista, el valor está disponible en el controlador. Cuando se hace
-        clic en el boton, se invoca el metodo incrementrarNumero(), que actualiza el dato vinculado "numero".
-    </div>
-
-    <p class="a">Resultado:</p>
-    <label> Introduce un numero</label>
-    <input type="number" [(ngModel)]="numero">
-    <h3>{{numero}}</h3>
-    <button class="btn btn-success" (click)="incrementarNumero()">Click para incrementar número
-    </button>
-</div>
+<p class="a">Resultado:</p>
+<label> Introduce un numero</label>
+<input type="number" [(ngModel)]="numero">
+<h3>{{numero}}</h3>
+<button class="btn btn-success" (click)="incrementarNumero()">Click para incrementar número
+</button>
 
 <app-doc-fuentes></app-doc-fuentes>
 <router-outlet></router-outlet>

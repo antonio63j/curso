@@ -2,22 +2,26 @@ import { Component, OnInit } from '@angular/core';
 import { Http, Response } from '@angular/http';
 
 @Component({
-  selector: 'app-doc-fuentes',
+  selector: 'app-doc-fuentes-testdirectivamenu',
   template: `
        <doc-fuentes [items]="items"></doc-fuentes>
   `
 })
 
-export class DocEj2waybindingComponent implements OnInit {
+export class DocTestdirectivamenuComponent implements OnInit {
   items: any[] = [
+    { title: 'Directiva',
+      code: '',
+      file: 'assets/app/directivamenu.directive.ts'
+    },
     { title: 'Template',
       code: '',
-      file: 'assets/app/ej2waybinding.component.html'
+      file: 'assets/app/testdirectivamenu.component.html'
     },
     { title: 'Componente',
       code: '',
-      file: 'assets/app/ej2waybinding.component.ts',
-      aread: 'assets/app/doc-ej2waybinding.html',
+      file: 'assets/app/testdirectivamenu.component.ts',
+      aread: 'assets/app/doc-testdirectivamenu.html',
       codeAread: ''
     }
   ];

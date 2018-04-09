@@ -2,22 +2,30 @@ import { Component, OnInit } from '@angular/core';
 import { Http, Response } from '@angular/http';
 
 @Component({
-  selector: 'app-doc-fuentes',
+  selector: 'app-doc-fuentes-usodirectivainputpadre',
   template: `
        <doc-fuentes [items]="items"></doc-fuentes>
   `
 })
 
-export class DocEj2waybindingComponent implements OnInit {
+export class DocUsodirectivainputpadreComponent implements OnInit {
   items: any[] = [
-    { title: 'Template',
+    { title: 'Template del hijo',
       code: '',
-      file: 'assets/app/ej2waybinding.component.html'
+      file: 'assets/app/usodirectivainputhijo.component.html'
+    },
+    { title: 'Componente hijo',
+      code: '',
+      file: 'assets/app/usodirectivainputhijo.component.ts'
+    },
+    { title: 'Template del padre',
+    code: '',
+    file: 'assets/app/usodirectivainputpadre.component.html'
     },
     { title: 'Componente',
       code: '',
-      file: 'assets/app/ej2waybinding.component.ts',
-      aread: 'assets/app/doc-ej2waybinding.html',
+      file: 'assets/app/usodirectivainputpadre.component.ts',
+      aread: 'assets/app/doc-usodirectivainputpadre.html',
       codeAread: ''
     }
   ];

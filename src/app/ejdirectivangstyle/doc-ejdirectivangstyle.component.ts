@@ -2,22 +2,22 @@ import { Component, OnInit } from '@angular/core';
 import { Http, Response } from '@angular/http';
 
 @Component({
-  selector: 'app-doc-fuentes',
+  selector: 'app-doc-fuentes-ejdirectivangstyle',
   template: `
        <doc-fuentes [items]="items"></doc-fuentes>
   `
 })
 
-export class DocEj2waybindingComponent implements OnInit {
+export class DocEjDirectivangstyleComponent implements OnInit {
   items: any[] = [
     { title: 'Template',
       code: '',
-      file: 'assets/app/ej2waybinding.component.html'
+      file: 'assets/app/ejdirectivangstyle.component.html'
     },
     { title: 'Componente',
       code: '',
-      file: 'assets/app/ej2waybinding.component.ts',
-      aread: 'assets/app/doc-ej2waybinding.html',
+      file: 'assets/app/ejdirectivangstyle.component.ts',
+      aread: 'assets/app/doc-ejdirectivangstyle.html',
       codeAread: ''
     }
   ];
