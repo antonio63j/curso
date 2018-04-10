@@ -1,19 +1,19 @@
-<header [hidden]="quote.snippets.length">
+<header [hidden]="varSelectorTexto.snippets.length">
   <p> <strong>Select some of the text below</strong>:</p></header>
-<header [hidden]="!quote.snippets.length">
+<header [hidden]="!varSelectorTexto.snippets.length">
   <p><strong>Select some more to add to the list</strong>:</header>
-<p appTextSelector #quote="appTextSelector" (textSelected)="onSelected($event)">
+<p appTextSelector #varSelectorTexto="selectorTexto" (textSelected)="onSelected($event)">
   {{movieQuote}}
 </p>
 <p><strong>Last selection</strong>
   <em>{{text || 'none'}}</em>
 </p>
 <div>
-  <a [hidden]="!quote.snippets.length" (click)="quote.clear(); false" href="">
+  <a [hidden]="!varSelectorTexto.snippets.length" (click)="varSelectorTexto.clear(); false" href="">
     Clear
   </a>
   <ol>
-    <li *ngFor="let snippet of quote.snippets">{{snippet}}</li>
+    <li *ngFor="let snippet of varSelectorTexto.snippets">{{snippet}}</li>
   </ol>
 </div>
 

@@ -2,7 +2,7 @@ import { Directive, EventEmitter, HostListener, Output } from '@angular/core';
 
 @Directive({
   selector: '[appTextSelector]',
-  exportAs: 'appTextSelector'
+  exportAs: 'selectorTexto' // Para asignar directiva a variable de la vista
 })
 export class TextSnippetDirective {
 

@@ -64,6 +64,8 @@ import { DocUsoDirectivaRainbowComponent } from './uso-directiva-rainbow/doc-uso
 
 import { UsoDirectivaConfirmComponent } from './uso-directiva-confirm/uso-directiva-confirm.component';
 import { TextSnippetComponent } from './uso-directiva-test-snippets/uso-directiva-test-snippets.component';
+import { DocUsoDirectivaConfirmComponent } from './uso-directiva-confirm/doc-uso-directiva-confirm.component';
+
 import { DocTextSnippetComponent } from './uso-directiva-test-snippets/doc-uso-directiva-test-snippets.component';
 
 import { TestDestroy } from './testdestroy/testdestroy.component';
@@ -97,6 +99,7 @@ import { AppDestroy } from './testdestroy/testdestroy.component';
     UsoDirectivaRainbowComponent,
     ConfirmDirectiveDirective,
     UsoDirectivaConfirmComponent,
+    DocUsoDirectivaConfirmComponent,
     TextSnippetDirective,
     TextSnippetComponent,
     TestDestroy,
