@@ -7,6 +7,8 @@ import { InicioComponent } from './inicio/inicio.component';
 import { CopyrightComponent } from './copyright/copyright.component';
 import { FechaactualComponent } from './fechaactual/fechaactual.component';
 import { ViewmodeloComponent } from './viewmodelo/viewmodelo.component';
+import { ViewmodeloPadreComponent } from './viewmodelo/viewmodelo-padre.component';
+
 import { EjpropertybindingComponent } from './ejpropertybinding/ejpropertybinding.component';
 import { EjeventbindingComponent } from './ejeventbinding/ejeventbinding.component';
 import { Ej2waybindingComponent } from './ej2waybinding/ej2waybinding.component';
@@ -26,7 +28,7 @@ const routes: Routes = [
   {path: 'home', component: InicioComponent},
   {path: 'copyright', component: CopyrightComponent},
   {path: 'fechas', component: FechaactualComponent},
-  {path: 'viewmodelo', component: ViewmodeloComponent},
+  {path: 'viewmodelo', component: ViewmodeloPadreComponent},
   {path: 'EjpropertybindingComponent', component: EjpropertybindingComponent},
   {path: 'EjeventbindingComponent' , component: EjeventbindingComponent},
   {path: 'Ej2waybindingComponent' , component: Ej2waybindingComponent},

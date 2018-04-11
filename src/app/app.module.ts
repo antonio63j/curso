@@ -31,6 +31,7 @@ import { CopyrightComponent } from './copyright/copyright.component';
 import { DocCopyrightComponent } from './copyright/doc-copyright.component';
 import { FechaactualComponent } from './fechaactual/fechaactual.component';
 import { ViewmodeloComponent } from './viewmodelo/viewmodelo.component';
+import { ViewmodeloPadreComponent } from './viewmodelo/viewmodelo-padre.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { PipeeuroPipe } from './mispipes/pipeeuro.pipe';
 import { Pipeeuro2Pipe } from './mispipes/pipeeuro2.pipe';
@@ -78,6 +79,7 @@ import { AppDestroy } from './testdestroy/testdestroy.component';
     DocCopyrightComponent,
     FechaactualComponent,
     ViewmodeloComponent,
+    ViewmodeloPadreComponent,
     PipeeuroPipe,
     Pipeeuro2Pipe,
     InicioComponent,
