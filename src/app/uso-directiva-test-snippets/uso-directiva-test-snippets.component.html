@@ -2,7 +2,9 @@
   <p> <strong>Select some of the text below</strong>:</p></header>
 <header [hidden]="!varSelectorTexto.snippets.length">
   <p><strong>Select some more to add to the list</strong>:</header>
-<p appTextSelector #varSelectorTexto="selectorTexto" (textSelected)="onSelected($event)">
+<!-- <p appTextSelector #varSelectorTexto="selectorTexto" (textSelected)="gestionTextoSeleccionado($event)"> -->
+<p appTextSelector #varSelectorTexto="selectorTexto" (textSelected)="gestionTextoSeleccionado($event)">
+ 
   {{movieQuote}}
 </p>
 <p><strong>Last selection</strong>

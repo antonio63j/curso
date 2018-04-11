@@ -42,7 +42,7 @@ const routes: Routes = [
   {path: 'AppDestroy', component: AppDestroy},
   {path: 'presupuestosprincipal', loadChildren: './presupuestos/presupuestos.module#PresupuestosModule'},
   {path: 'proveedoreshome', loadChildren: './proveedores/proveedores.module#ProveedoresModule'},
-
+  {path: 'comunicacion-observable', loadChildren: './comunicacion-observable/comunicacion-observable.module#ComunicacionObservableModule'},
   {path: '**', redirectTo: 'fechas', pathMatch: 'full'},
 
 ];

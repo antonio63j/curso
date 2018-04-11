@@ -1,16 +1,15 @@
 <div class="container-demo-texto">
     <p>
         <h3>
-            <p>Construcción directiva de ambito de módulo, desde la directiva saltará evento "selected" con el texto seleccionado.</p>
-            <p>Utilización de métodos y propiedades de la directiva desde la vista.</p>
+            <p>Desde la vista y a través de la directiva, se establece el método del componente que será invocado para gestionar el evento con el texto seleccionado.
+                <strong>(textSelected)="gestionTextoSeleccionado($event)" </strong>
             <p>@Output, utilizado por la directiva para que desde la vista se envíe evento al controlador</p>
             <p>@HostListener</p>
-            <p>En los metadatos @Directive , se establece exportAs, con ello podemos asociar una variable con la directiva, y así poder invocar fácilmente propiedades y métodos de la directiva</p>
+            <p>Con los metadatos @Directive , se establece exportAs, con ello podemos asociar una variable (en la vista) con la directiva (instancia de la clase), y así poder invocar fácilmente propiedades y métodos de la directiva</p>
             <ul>
                 <li>
                     @Output
                 </li>
-                <li>
                     @HostListener
                 </li>
             </ul>

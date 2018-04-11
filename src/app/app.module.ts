@@ -23,7 +23,7 @@ import { TextSnippetDirective } from './misdirectivas/test-snippets.directive';
 import { ProveedoresService } from './proveedores/proveedores.service';
 
 // importacion de componentes
-import { AppComponent } from './app.component'; 
+import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { RegistroComponent } from './registro/registro.component';
 

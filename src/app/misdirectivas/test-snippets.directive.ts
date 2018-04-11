@@ -11,11 +11,11 @@ export class TextSnippetDirective {
   private _snippets: string[] = [];
 
   @HostListener('mouseup')
-  onSelected() {
-    const text = document.getSelection().toString();
-    if (text) {
-      this._snippets.push(text);
-      this.textSelected.emit(text);
+  mandarAlControladorTextoSeleccionado() {
+    const texto = document.getSelection().toString();
+    if (texto) {
+      this._snippets.push(texto + texto);
+      this.textSelected.emit(texto);
     }
   }
 

@@ -9,10 +9,14 @@ import { Desarrollador } from '../modelo/desarrollador.modelo';
 export class ViewmodeloComponent implements OnInit{
 
    desarrollador = new Desarrollador(1, 'Juan', 'Gutiérrez', 'Madrid');
-
+   textoprueba: string = 'valor asignado por componente';
    constructor() { }
 
    ngOnInit() {
+   }
+
+   onChanges (): void {
+     console.log ('En ViewmodeloComponent.onChange()');
    }
 
  }
