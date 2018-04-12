@@ -8,11 +8,11 @@ import { Component, Input } from '@angular/core';
   <div class="container-demo">
       <div *ngFor="let item of items">
         <div *ngIf = "item.aread !== undefined">
-          <h3>Despcripción del módulo</h3>
+          <h4>Despcripción del módulo</h4>
           <div innerHtml = "{{item.codeAread}}"></div>
         </div>
       </div>
-      <h3>Códigos fuente</h3>
+      <h4>Códigos fuente</h4>
       <div *ngFor="let item of items">
         <h4>{{item.title}}({{item.file}})</h4>
         <pre><code highlight [code]="item.code"></code></pre>

@@ -23,7 +23,7 @@ import { TextSnippetDirective } from './misdirectivas/test-snippets.directive';
 import { ProveedoresService } from './proveedores/proveedores.service';
 
 // importacion de componentes
-import { AppComponent } from './app.component'; 
+import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { RegistroComponent } from './registro/registro.component';
 
@@ -31,6 +31,9 @@ import { CopyrightComponent } from './copyright/copyright.component';
 import { DocCopyrightComponent } from './copyright/doc-copyright.component';
 import { FechaactualComponent } from './fechaactual/fechaactual.component';
 import { ViewmodeloComponent } from './viewmodelo/viewmodelo.component';
+import { ViewmodeloPadreComponent } from './viewmodelo/viewmodelo-padre.component';
+import { DocViewmodeloPadreComponent } from './viewmodelo/doc-viewmodelo-padre.component';
+
 import { InicioComponent } from './inicio/inicio.component';
 import { PipeeuroPipe } from './mispipes/pipeeuro.pipe';
 import { Pipeeuro2Pipe } from './mispipes/pipeeuro2.pipe';
@@ -78,6 +81,8 @@ import { AppDestroy } from './testdestroy/testdestroy.component';
     DocCopyrightComponent,
     FechaactualComponent,
     ViewmodeloComponent,
+    ViewmodeloPadreComponent,
+    DocViewmodeloPadreComponent,
     PipeeuroPipe,
     Pipeeuro2Pipe,
     InicioComponent,

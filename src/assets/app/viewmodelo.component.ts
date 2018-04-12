@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnChanges, Input, SimpleChanges, SimpleChange } from '@angular/core';
 import { Desarrollador } from '../modelo/desarrollador.modelo';
 
 @Component({
@@ -6,13 +6,23 @@ import { Desarrollador } from '../modelo/desarrollador.modelo';
   templateUrl: './viewmodelo.component.html',
   styleUrls: ['./viewmodelo.component.css']
 })
-export class ViewmodeloComponent implements OnInit{
 
-   desarrollador = new Desarrollador(1, 'Juan', 'Gutiérrez', 'Madrid');
+export class ViewmodeloComponent implements OnInit, OnChanges {
 
-   constructor() { }
+  @Input () textoprueba: string;
+  @Input () desarrollador: Desarrollador;
+  textoprueba2: string;
 
-   ngOnInit() {
-   }
+  constructor() { }
 
- }
+  ngOnInit() { }
+
+  ngOnChanges(changes: SimpleChanges) {
+    const textoprueba: SimpleChange = changes.textoprueba;
+    console.log(' textoprueba.previousValue: ', textoprueba.previousValue);
+    console.log('textoprueba.currentValue: ', textoprueba.currentValue);
+    console.log('textoprueba: ', textoprueba);
+    console.log('this.desarrollador.nombre:', this.desarrollador.nombre);
+    this.textoprueba2 = textoprueba.currentValue.toUpperCase();
+  }
+}

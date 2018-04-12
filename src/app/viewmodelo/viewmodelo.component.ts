@@ -9,8 +9,8 @@ import { Desarrollador } from '../modelo/desarrollador.modelo';
 
 export class ViewmodeloComponent implements OnInit, OnChanges {
 
-  desarrollador = new Desarrollador(1, 'Juan', 'Gutiérrez', 'Madrid');
   @Input () textoprueba: string;
+  @Input () desarrollador: Desarrollador;
   textoprueba2: string;
 
   constructor() { }
@@ -19,8 +19,10 @@ export class ViewmodeloComponent implements OnInit, OnChanges {
 
   ngOnChanges(changes: SimpleChanges) {
     const textoprueba: SimpleChange = changes.textoprueba;
-    console.log('prev value: ', textoprueba.previousValue);
-    console.log('last value: ', textoprueba.currentValue);
+    console.log(' textoprueba.previousValue: ', textoprueba.previousValue);
+    console.log('textoprueba.currentValue: ', textoprueba.currentValue);
+    console.log('textoprueba: ', textoprueba);
+    console.log('this.desarrollador.nombre:', this.desarrollador.nombre);
     this.textoprueba2 = textoprueba.currentValue.toUpperCase();
   }
 }
