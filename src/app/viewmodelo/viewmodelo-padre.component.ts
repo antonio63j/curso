@@ -1,34 +1,32 @@
-import { Component, OnInit } from '@angular/core';
-import { Desarrollador } from '../modelo/desarrollador.modelo';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 
 @Component({
   selector: 'app-viewmodelo-padre',
-  
+
   template: `
     <app-viewmodelo [textoprueba]="textopruebaPadre"></app-viewmodelo> 
   `,
 })
-export class ViewmodeloPadreComponent implements OnInit {
+export class ViewmodeloPadreComponent implements OnInit, OnDestroy {
 
-  desarrollador = new Desarrollador(1, 'Juan', 'Gutiérrez', 'Madrid');
-  textopruebaPadre: string = 'valor por componente padre';
+  textopruebaPadre: string;
+  timerInterval: any;
+  date: any;
+
   constructor() {
-
+    this.textopruebaPadre = 'Texto asignado desde el padre';
+    this.timerInterval = setInterval(() => { this.testOnChanges(); }, 2000);
   }
 
-  ngOnInit() {
-    this.testOnChanges();
-  }
+  ngOnInit() { }
 
   testOnChanges() {
-    let date: Date;
-      //  while (true) {
-      setTimeout(() => {    // <<<---    using ()=> syntax
-        // date = new (Date);
-        this.textopruebaPadre =  "hola";
-        console.log("despues del settimeout()");
-      }, 3000);
-  
-    console.log(`date: ${this.textopruebaPadre}`);
+    this.date = Date.now();
+    this.textopruebaPadre = 't' + this.date.toString();
+  }
+
+  ngOnDestroy() {
+    clearInterval(this.timerInterval);
+    delete this.timerInterval;
   }
 }

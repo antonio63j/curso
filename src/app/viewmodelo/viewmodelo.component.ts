@@ -1,4 +1,4 @@
-import { Component, OnInit, OnChanges, Input } from '@angular/core';
+import { Component, OnInit, OnChanges, Input, SimpleChanges, SimpleChange } from '@angular/core';
 import { Desarrollador } from '../modelo/desarrollador.modelo';
 
 @Component({
@@ -6,17 +6,21 @@ import { Desarrollador } from '../modelo/desarrollador.modelo';
   templateUrl: './viewmodelo.component.html',
   styleUrls: ['./viewmodelo.component.css']
 })
+
 export class ViewmodeloComponent implements OnInit, OnChanges {
 
-   desarrollador = new Desarrollador(1, 'Juan', 'Gutiérrez', 'Madrid');
-   @Input() textoprueba: string;
-   constructor() { }
+  desarrollador = new Desarrollador(1, 'Juan', 'Gutiérrez', 'Madrid');
+  @Input () textoprueba: string;
+  textoprueba2: string;
 
-   ngOnInit() {
-   }
+  constructor() { }
 
-   ngOnChanges (changes: any): void {
-     console.log ('En ViewmodeloComponent.onChange()');
-   }
+  ngOnInit() { }
 
- }
+  ngOnChanges(changes: SimpleChanges) {
+    const textoprueba: SimpleChange = changes.textoprueba;
+    console.log('prev value: ', textoprueba.previousValue);
+    console.log('last value: ', textoprueba.currentValue);
+    this.textoprueba2 = textoprueba.currentValue.toUpperCase();
+  }
+}
