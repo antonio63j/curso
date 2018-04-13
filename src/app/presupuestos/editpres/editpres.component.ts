@@ -1,14 +1,15 @@
-import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { Component, OnInit, OnDestroy } from '@angular/core';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { PresupuestosService } from '../presupuestos.service';
 import { Router, ActivatedRoute } from '@angular/router';
+import { Subscription } from 'rxjs/Subscription';
 
 @Component({
   selector: 'app-editpres',
   templateUrl: './editpres.component.html',
   styleUrls: ['./editpres.component.css']
 })
-export class EditpresComponent implements OnInit {
+export class EditpresComponent implements OnInit, OnDestroy {
 
   presupuestoForm: FormGroup;
   presupuesto: any;
@@ -16,17 +17,17 @@ export class EditpresComponent implements OnInit {
   tipo: any;
   iva: any = 0;
   total: any = 0;
-
   id: string;
+  subscriptionChanges; subscriptionParams; subscriptionGetPresupuesto: Subscription;
 
   constructor(private pf: FormBuilder,
     private presupuestoService: PresupuestosService,
     private router: Router,
     private activatedRouter: ActivatedRoute) {
-    this.activatedRouter.params
+    this.subscriptionParams = this.activatedRouter.params
       .subscribe(parametros => {
         this.id = parametros['id'];
-        this.presupuestoService.getPresupuesto(this.id)
+        this.subscriptionGetPresupuesto = this.presupuestoService.getPresupuesto(this.id)
           .subscribe(unPresupuesto => this.presupuesto = unPresupuesto);
       });
   }
@@ -45,7 +46,7 @@ export class EditpresComponent implements OnInit {
   }
 
   onChanges(): void {
-    this.presupuestoForm.valueChanges.subscribe(valor => {
+    this.subscriptionChanges = this.presupuestoForm.valueChanges.subscribe(valor => {
       this.base = valor.base;
       this.tipo = valor.tipo;
       this.presupuestoForm.value.iva = this.base * this.tipo;
@@ -63,9 +64,7 @@ export class EditpresComponent implements OnInit {
   }
 
   savePresupuesto() {
-
     const saveElPresupuesto = {
-
       proveedor: this.presupuestoForm.get('proveedor').value,
       fecha: this.presupuestoForm.get('fecha').value,
       concepto: this.presupuestoForm.get('concepto').value,
@@ -76,6 +75,15 @@ export class EditpresComponent implements OnInit {
 
     };
     return saveElPresupuesto;
+  }
+
+  ngOnDestroy() {
+    console.log('en ngOnDestroy(), realizando unsubscribes');
+    this.subscriptionParams.unsubscribe();
+    this.subscriptionGetPresupuesto.unsubscribe();
+    if (this.subscriptionChanges) {
+      this.subscriptionChanges.unsubscribe();
+    }
   }
 
 }

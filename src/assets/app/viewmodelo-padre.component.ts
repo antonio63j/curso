@@ -15,7 +15,7 @@ export class ViewmodeloPadreComponent implements OnInit, OnDestroy {
   timerInterval: any;
   date: any;
   desarrollador: Desarrollador;
-  
+
   constructor() { }
 
   ngOnInit() {

@@ -1,14 +1,15 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-  
+  <h2>{{ title }}!</h2>
+  <img width="300" alt="Angular Logo" src="assets/img/angular-red.png">
   <button (click)="sendMessage()">Send Message</button>
   <button (click)="clearMessage()">Clear Message</button>
+  <button *ngIf="!sendingMessages; else yasending" class="btn btn-success" (click)="startSendMessages()">Start send messages</button>
+  <ng-template #yasending>
+    <button class="btn btn-succes" disabled>Start send messages</button>
+  </ng-template>
+  <button *ngIf="sendingMessages" class="btn btn-success" (click)="stopSendMessages()">Stop send Messages</button>
 </div>
-<h2>AppComponent enviará mensajes a estos componentes receptores de mensajes:</h2>
 
 <app-receptor1></app-receptor1>
 <app-receptor2></app-receptor2>

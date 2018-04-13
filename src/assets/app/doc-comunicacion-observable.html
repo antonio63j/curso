@@ -1,17 +1,24 @@
 <div class="container-demo-texto">
     <p>
         <h3>
-            Un emisor envía mensaje a dos receptores por medio de un servicio y con la tecnología observable
-            <hr> Elemento angular empleados:
+            Un emisor envía mensaje que serán capturados por los receptores. Para ello se ha definido un servicio que gestiona las subscripciones
+            (subjects) con la interfaz observable
+            <hr> Utilidades angular empleadas:
             <ul>
                 <li>
-                    [(ngModel)]
+                    @Injectable en el servicio
                 </li>
                 <li>
-                    {{ }}
+                    Utilizacion de Observable y Subject de rxjs en el servicio
                 </li>
                 <li>
-                    En el componenete no hay que emplear nada especial, únicamente tener declardo la variable asociada a [(ngModel)]
+                    implementacion de la interfaz OnDestroy en los receptores para hacer el unsubscribe
+                </li>
+                <li>
+                    Directiva *NgIf con else en emisor
+                </li>
+                <li>
+                    Arranque y parada de tarea (setInterval) de envío de mensajes
                 </li>
             </ul>
         </h3>

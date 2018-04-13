@@ -28,7 +28,7 @@ export class DocViewmodeloPadreComponent implements OnInit {
 
   constructor(private http: Http) {
     // tslint:disable-next-line:forin
-    for (let ind in this.items) {
+    for (const ind in this.items) {
       const i = ind;
       this.http.get(this.items[i].file)
         .subscribe(data => { this.items[i].code = data.text(); });

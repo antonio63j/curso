@@ -23,8 +23,8 @@ export class DocComunicacionObservableComponent implements OnInit {
     {
       title: 'Componente del emisor',
       code: '',
-      file: 'assets/app/emisosr.component.ts',
-      aread: 'assets/app/doc-comunicacion-observable.component.html',
+      file: 'assets/app/emisor.component.ts',
+      aread: 'assets/app/doc-comunicacion-observable.html',
       codeAread: ''
     },
     {
@@ -32,6 +32,7 @@ export class DocComunicacionObservableComponent implements OnInit {
       code: '',
       file: 'assets/app/receptor1.component.html'
     },
+    {
       title: 'Componente de uno de los receptores',
       code: '',
       file: 'assets/app/receptor1.component.ts'
