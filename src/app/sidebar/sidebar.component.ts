@@ -28,6 +28,8 @@ export const ROUTES: RouteInfo[] = [
     { path: 'presupuestosprincipal', title: 'Froms Reactivos', icon: 'pe-7s-news-paper', class: '' },
     { path: 'proveedoreshome', title: 'Forms Template-driven', icon: 'pe-7s-news-paper', class: '' },
     { path: 'comunicacion-observable', title: 'Comunicacion con observables', icon: 'pe-7s-news-paper', class: '' },
+    { path: 'form-login', title: 'Formulario login', icon: 'pe-7s-news-paper', class: '' },
+
   ];
 
 @Component({

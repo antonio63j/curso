@@ -10,10 +10,8 @@ export class LoginComponent implements OnInit {
 
   loginForm: FormGroup;
   login: any;
-
   usuario: string;
   password: string;
-  
   registroForm: FormGroup;
   registro: any;
   // inyectar luego en loginService
@@ -31,23 +29,20 @@ export class LoginComponent implements OnInit {
     this.loginForm = this.pf.group({
       usuario: ['', [Validators.required, Validators.minLength(8), Validators.maxLength(18)]],
       password: ['', [Validators.required, Validators.minLength(8)]],
-      passwordConfirm: ['', [Validators.required, Validators.minLength(8)]],
     });
     this.onChange();
 
-  };
-
-  passwordMatchValidator(g: FormGroup) {
-    return g.get('password').value === g.get('passwordConfirm').value
-      ? null : { 'mismatch': true };
   }
 
   onChange(): void {
     this.loginForm.valueChanges.subscribe(valor => {
       this.usuario = valor.usuario;
       this.password = valor.password;
-      console.log(`intenta entrar ${this.usuario}`);
+      console.log(`intenta entrar ${this.usuario} con password: ${this.password}`);
     });
+  }
+  onSubmit() {
+    this.loginForm.reset();
   }
 
 }

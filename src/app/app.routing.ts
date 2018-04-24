@@ -22,6 +22,8 @@ import { UsoDirectivaRainbowComponent } from './uso-directiva-rainbow/uso-direct
 import { UsoDirectivaConfirmComponent } from './uso-directiva-confirm/uso-directiva-confirm.component';
 import { TextSnippetComponent } from './uso-directiva-test-snippets/uso-directiva-test-snippets.component';
 import { AppDestroy } from './testdestroy/testdestroy.component';
+import { LoginComponent } from './login/login.component';
+import { RegistroComponent } from './registro/registro.component';
 
 const routes: Routes = [
   {path: '', redirectTo: 'fechas', pathMatch: 'full'},
@@ -45,7 +47,10 @@ const routes: Routes = [
   {path: 'presupuestosprincipal', loadChildren: './presupuestos/presupuestos.module#PresupuestosModule'},
   {path: 'proveedoreshome', loadChildren: './proveedores/proveedores.module#ProveedoresModule'},
   {path: 'comunicacion-observable', loadChildren: './comunicacion-observable/comunicacion-observable.module#ComunicacionObservableModule'},
+  {path: 'form-login', component: LoginComponent},
+  {path: 'registro', component: RegistroComponent},
   {path: '**', redirectTo: 'fechas', pathMatch: 'full'},
+
 
 ];
 

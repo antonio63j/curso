@@ -7,13 +7,11 @@ import { FormControl, FormGroup, FormBuilder, Validators } from '@angular/forms'
   styleUrls: ['./registro.component.scss']
 })
 export class RegistroComponent implements OnInit {
-
   registroForm: FormGroup;
   registro: any;
-
   usuario: string;
   password: string;
-  // inyectar luego en registroService
+
   constructor(private pf: FormBuilder) {
   }
 
@@ -25,18 +23,9 @@ export class RegistroComponent implements OnInit {
     },
       this.passwordMatchValidator);
     this.onChange();
-
-    // this.registroForm = this.pf.group({
-    //   usuario: ['', [Validators.required, Validators.minLength(8), Validators.maxLength(18)]],
-    //   password: ['', [Validators.required, Validators.minLength(8)]],
-    //   passwordConfirm: ['', [Validators.required, Validators.minLength(8)]],
-    // });
-    // this.onChange();
-
-  };
+  }
 
   passwordMatchValidator(g: FormGroup) {
-    console.log("en passwordMatchValidator");
     return g.get('password').value === g.get('passwordConfirm').value
       ? null : { 'mismatch': true };
   }
@@ -47,6 +36,10 @@ export class RegistroComponent implements OnInit {
       this.password = valor.password;
       console.log(`intenta entrar ${this.usuario}`);
     });
+  }
+
+  onSubmit(): void {
+    this.registroForm.reset();
   }
 
 }

@@ -40,22 +40,6 @@
                   </div>
                 </div>
               </div>
-              <div class="row">
-                <div class="col-md-10">
-                  <div class="form-group">
-                    <label for=passwordConfirm>Confirma password</label>
-                    <i class="fa fa-check-circle check" *ngIf="loginForm.controls.passwordConfirm.valid"></i>
-                    <i class="fa fa-exclamation-circle uncheck" *ngIf="loginForm.controls.passwordConfirm.invalid &&
-                      loginForm.controls.passwordConfirm.touched"></i>
-                    <input type="text" class="form-control" placeholder="tu passwordConfirm" id="passwordConfirm" formControlName="passwordConfirm">
-                    <p class="alert alert-danger" *ngIf="loginForm.controls.passwordConfirm.invalid &&
-                      loginForm.controls.passwordConfirm.touched">
-                      La confirmación de password es obligatoria
-                    </p>
-                  </div>
-                </div>
-              </div>
-
 
               <button type="submit" class="btn btn-primary" [disabled]="!loginForm.valid">Iniciar sesión</button>
               <a class="btn btn-primary" routerLink="/registro">Registrarse</a>

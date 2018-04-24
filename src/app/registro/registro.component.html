@@ -50,7 +50,7 @@
                     <input type="text" class="form-control" placeholder="tu passwordConfirm" id="passwordConfirm" formControlName="passwordConfirm">
                     <p class="alert alert-danger" *ngIf="registroForm.controls.passwordConfirm.invalid &&
                       registroForm.controls.passwordConfirm.touched">
-                      La confirmación de password es obligatoria
+                      La confirmación de password es obligatoria y coincidente con password
                     </p>
                   </div>
                 </div>
