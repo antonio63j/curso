@@ -1,0 +1,16 @@
+
+Ejemplos en @viewChild():
+
+1. @ViewChild se puede utilizar para comunicacion entre componentes. De forma que el componente padre instanciará al comonente hijo y podrá hacer uso de metodos y propiedades del hijo.
+   
+   NumberComponent  y NumberParentComponent
+   
+2. ViewChild usando directiva. El componente instanciará una directiva y podrá hacer uso de los métodos que se definan en dicha directiva.
+
+3. Acceso a elementos DOM mediante variables template.
+   Con @ViewChild instanciamos un elemento DOM o ElementRef correspondiente a una variable template, de forma que se podrá cambiar la apariencia del elemento asociado a dicha variable.
+
+4. Es posible utilizar múltimples @ViewChild en un mismo componente para controlar otros componentes y directivas.
+   Veremos un ejemplo en que se fusionan todos los ejemplos anteriores.
+   
+   
