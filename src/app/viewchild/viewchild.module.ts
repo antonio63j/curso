@@ -13,6 +13,10 @@ import { ViewchildHomeComponent } from './viewchild-home/viewchild-home.componen
     CommonModule,
     ViewchildRoutingModule
   ],
-  declarations: [ViewchildDemo3Component, ViewchildDemo2Component, ViewchildDemo1Component, ViewchildHomeComponent]
+  declarations: [
+    ViewchildDemo3Component,
+    ViewchildDemo2Component,
+    ViewchildDemo1Component,
+    ViewchildHomeComponent]
 })
 export class ViewchildModule { }

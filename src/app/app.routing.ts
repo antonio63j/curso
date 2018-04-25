@@ -49,8 +49,8 @@ const routes: Routes = [
   {path: 'comunicacion-observable', loadChildren: './comunicacion-observable/comunicacion-observable.module#ComunicacionObservableModule'},
   {path: 'form-login', component: LoginComponent},
   {path: 'registro', component: RegistroComponent},
+  {path: 'viewchild', loadChildren: './viewchild/viewchild.module#ViewchildModule'},
   {path: '**', redirectTo: 'fechas', pathMatch: 'full'},
-
 
 ];
 

@@ -13,6 +13,8 @@ import { FooterModule } from './shared/footer/footer.module';
 import { SidebarModule } from './sidebar/sidebar.module';
 import { DocFuentesModule } from './doc-fuentes/doc-fuentes.module';
 import { HighlightModule } from 'ngx-highlightjs';
+import { ViewchildModule } from './viewchild/viewchild.module';
+
 // import { LbdModule } from './lbd/lbd.module';
 
 // importacion mis directivas
@@ -105,6 +107,7 @@ import { AppDestroy } from './testdestroy/testdestroy.component';
     DocTextSnippetComponent,
     LoginComponent,
     RegistroComponent
+    
   ],
   imports: [
     BrowserModule,
@@ -117,7 +120,8 @@ import { AppDestroy } from './testdestroy/testdestroy.component';
     AppRoutingModule,
     ReactiveFormsModule,
     DocFuentesModule,
-    HighlightModule.forRoot()
+    HighlightModule.forRoot(),
+    ViewchildModule
 
     // LbdModule
   ],
