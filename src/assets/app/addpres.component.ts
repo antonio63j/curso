@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
-// Para control de formularios reactivos
-import {FormControl, FormGroup, FormBuilder, Validators} from '@angular/forms';
-import {PresupuestosService} from '../presupuestos.service';
+import { Component, OnInit, OnDestroy } from '@angular/core';
+// Para control de formularios reactivos, debe importarse ReactiveFormsModule
+import { FormControl, FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { PresupuestosService } from '../presupuestos.service';
+import { Subscription } from 'rxjs/Subscription';
 
 @Component({
   selector: 'app-addpres',
@@ -9,7 +10,7 @@ import {PresupuestosService} from '../presupuestos.service';
   styleUrls: ['./addpres.component.css']
 })
 
-export class AddpresComponent implements OnInit {
+export class AddpresComponent implements OnInit, OnDestroy {
 
   presupuestoForm: FormGroup;
   presupuesto: any;
@@ -17,9 +18,10 @@ export class AddpresComponent implements OnInit {
   tipo: any;
   iva: any = 0;
   total: any = 0;
+  subscriptionOnChange; subscriptionOnSubmit: Subscription;
 
   constructor(private pf: FormBuilder,
-              private presupuestoService: PresupuestosService){}
+    private presupuestoService: PresupuestosService) { }
 
   ngOnInit() {
     this.presupuestoForm = this.pf.group({
@@ -35,17 +37,17 @@ export class AddpresComponent implements OnInit {
     this.onChange();
   }
 
-  onSubmit () {
+  onSubmit() {
     this.presupuesto = this.savePresupuesto();
-    this.presupuestoService.postPresupuesto(this.presupuesto)
-     .subscribe(newpres => { });
-     this.presupuestoForm.reset();
+    this.subscriptionOnSubmit = this.presupuestoService.postPresupuesto(this.presupuesto)
+      .subscribe(newpres => { });
+    this.presupuestoForm.reset();
   }
 
-  savePresupuesto () {
+  savePresupuesto() {
     const savePresupuesto = {
       proveedor: this.presupuestoForm.get('proveedor').value,
-      fecha: this. presupuestoForm.get('fecha').value,
+      fecha: this.presupuestoForm.get('fecha').value,
       concepto: this.presupuestoForm.get('concepto').value,
       base: this.presupuestoForm.get('base').value,
       tipo: this.presupuestoForm.get('tipo').value,
@@ -56,10 +58,20 @@ export class AddpresComponent implements OnInit {
   }
 
   onChange(): void {
-    this.presupuestoForm.valueChanges.subscribe(valor => {
+    this.subscriptionOnChange = this.presupuestoForm.valueChanges.subscribe(valor => {
       this.base = valor.base;
       this.tipo = valor.tipo;
       this.presupuestoForm.value.iva = this.base * this.tipo;
-      this.presupuestoForm.value.total = this.base + (this.base * this.tipo); }); }
+      this.presupuestoForm.value.total = this.base + (this.base * this.tipo);
+    });
+  }
+
+  ngOnDestroy () {
+     console.log('AddpresComponent.ngOnDestroy (), realizando unsubscribes');
+     this.subscriptionOnChange.unsubscribe();
+     if (this.subscriptionOnChange.subscriptionOnSubmint) {
+      this.subscriptionOnSubmit.unsubscribe();
+     }
+  }
 
 }

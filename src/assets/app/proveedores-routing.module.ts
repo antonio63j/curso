@@ -23,6 +23,7 @@ const routes: Routes = [
   providers: [
     { provide: LocationStrategy, useClass: HashLocationStrategy }
   ],
-  exports: [RouterModule]
+  // exports: [RouterModule]
+  exports: []
 })
 export class ProveedoresRoutingModule { }

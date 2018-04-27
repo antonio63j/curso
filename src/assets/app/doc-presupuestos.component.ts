@@ -23,6 +23,16 @@ export class DocPresupuestosComponent implements OnInit {
       codeAread: ''
     },
     {
+      title: 'Template addpres',
+      code: '',
+      file: 'assets/app/addpres.component.html'
+    },
+    {
+      title: 'Componente addpres',
+      code: '',
+      file: 'assets/app/addpres.component.ts'
+    },
+    {
       title: 'Template editpres',
       code: '',
       file: 'assets/app/editpres.component.html'
@@ -30,7 +40,7 @@ export class DocPresupuestosComponent implements OnInit {
     {
       title: 'Componente editpres',
       code: '',
-      file: 'assets/app/edit.component.ts'
+      file: 'assets/app/editpres.component.ts'
     }
   ];
 
