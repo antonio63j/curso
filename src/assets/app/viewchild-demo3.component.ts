@@ -1,15 +1,35 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
+import { ViewchildDemo1ChildComponent } from '../viewchild-demo1/viewchild-demo1child.component';
+import { ViewchildDemo2ChildDirective } from '../viewchild-demo2/viewchild-demo2child.directive';
 
 @Component({
   selector: 'app-viewchild-demo3',
-  templateUrl: './viewchild-demo3.component.html',
-  styleUrls: ['./viewchild-demo3.component.scss']
+  templateUrl: './viewchild-demo3.component.html'
 })
-export class ViewchildDemo3Component implements OnInit {
 
-  constructor() { }
+export class ViewchildDemo3Component {
 
-  ngOnInit() {
+  @ViewChild(ViewchildDemo2ChildDirective)
+  private cpColorDirective: ViewchildDemo2ChildDirective;
+
+  @ViewChild(ViewchildDemo1ChildComponent)
+  private numberComponent: ViewchildDemo1ChildComponent;
+
+  // Uso método de directiva
+  changeColor(color: string) {this.cpColorDirective.change(color);
   }
 
+  // Contador manual
+  increase() {this.numberComponent.increaseByOne();
+  }
+  decrease() {this.numberComponent.decreaseByOne();
+  }
+
+  // Contador automático
+  startStopwatch() {
+    this.numberComponent.start();
+  }
+  stopStopwatch() {
+    this.numberComponent.stop();
+  }
 }

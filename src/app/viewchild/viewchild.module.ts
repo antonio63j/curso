@@ -11,6 +11,7 @@ import { ViewchildDemo2ChildDirective } from './viewchild-demo2/viewchild-demo2c
 import { ViewchildDemo1Component } from './viewchild-demo1/viewchild-demo1.component';
 import { ViewchildDemo1ChildComponent } from './viewchild-demo1/viewchild-demo1child.component';
 import { DocViewchildDemo1Component } from './viewchild-demo1/doc-viewchild-demo1.component';
+import { DocViewchildDemo2Component } from './viewchild-demo2/doc-viewchild-demo2.component';
 
 import { ViewchildHomeComponent } from './viewchild-home/viewchild-home.component';
 
@@ -27,7 +28,8 @@ import { ViewchildHomeComponent } from './viewchild-home/viewchild-home.componen
     ViewchildDemo1Component,
     ViewchildHomeComponent,
     ViewchildDemo1ChildComponent,
-    DocViewchildDemo1Component
+    DocViewchildDemo1Component,
+    DocViewchildDemo2Component
   ]
 })
 export class ViewchildModule { }

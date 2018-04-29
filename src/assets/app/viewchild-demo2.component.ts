@@ -9,10 +9,12 @@ import { ViewchildDemo2ChildDirective } from './viewchild-demo2child.directive';
 
 export class ViewchildDemo2Component {
 
-@ViewChild (ViewchildDemo2ChildDirective)
-private cpColorDirective: ViewchildDemo2ChildDirective;
+  color: string;
 
-changeColor (color: string) {
-  this.cpColorDirective.change(color);
+  @ViewChild(ViewchildDemo2ChildDirective)
+  private cpColorDirective: ViewchildDemo2ChildDirective;
+  
+  changeColor(color: string) {
+    this.cpColorDirective.change(color);
   }
 }

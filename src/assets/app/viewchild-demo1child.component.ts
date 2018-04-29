@@ -14,10 +14,11 @@ export class ViewchildDemo1ChildComponent {
 
   message: string = '';
   count: number = 0;
-  // Proc. para el contador
+  // Procs. para el contador manual
   increaseByOne() { ++this.count; }
   decreaseByOne() { --this.count; }
 
+  // Procs. para contador automático
   shouldRun: boolean = false;
   count2: number = 0;
   start() {

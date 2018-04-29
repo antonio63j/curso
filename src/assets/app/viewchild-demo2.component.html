@@ -1,12 +1,38 @@
 <h3>@ViewChild using Directive</h3>
 Color Example:
-<p directiva-viewchild-demo2child>Texto para probar cambio de color</p>
+
 <div>
-  Change Color:
-  <input type="radio" name="rad" (click)= "changeColor('green')"> Green
-  <input type="radio" name="rad" (click)= "changeColor('cyan')"> Cyan
-  <input type="radio" name="rad" (click)= "changeColor('blue')"> Blue
-</div> 
+  <h3>Asignación del color de texto utilizando el metodo change de la directiva:</h3>
+  <input type="radio" name="rad" (click)="changeColor('green')"> Green
+  <input type="radio" name="rad" (click)="changeColor('cyan')"> Cyan
+  <input type="radio" name="rad" (click)="changeColor('blue')"> Blue
+</div>
+<p appHighlight>Texto para probar cambio de color</p>
+<p appHighlight #texto2>Texto para probar cambio de color</p>
 <hr>
+<div>
+  <h3>Asignacion de color para resaltar (color de appHighlight)</h3>
+  <input type="radio" name="colors" (click)="color='lightgreen'">Green
+  <input type="radio" name="colors" (click)="color='yellow'">Yellow
+  <input type="radio" name="colors" (click)="color='cyan'">Cyan
+  <input type="radio" name="colors" (click)="color=''">Reset sobre variable colorn
+</div>
+<p [appHighlight]="color">[appHighlight]="color"</p>
+<p [appHighlight]="color" defaultColor="violet"> [appHighlight]="color" defaultColor="violet"</p>
+<p [appHighlight]="'yellow'">[appHighlight]="'yellow'"</p>
+<p appHighlight="orange">appHighlight="orange"</p>
+<p appHighlight>appHighlight</p>
+<p appHighlight>Sin valor de atributo, igual que el de arriba</p>
+<hr>
+<div>
+    <h3>Asignacion de color para resaltar cuando no hay color definido ni default establecido, utilización del método changeAtributColorNoEspecificado</h3>
+    <input type="radio" name="colors" (click)="changeAtributColorNoEspecificado('Green')">Verde
+    <input type="radio" name="colors" (click)="changeAtributColorNoEspecificado('Indigo')">Indigo
+    <input type="radio" name="colors" (click)="changeAtributColorNoEspecificado('GreenYellow')">GreenYellow
+    {{atributoColorNoEspecificado}} 
+  </div>
 
 <button type="button" class="btn btn-secondary" routerLink="/viewchild">Home</button>
+
+<app-doc-fuentes-viewchild-demo2></app-doc-fuentes-viewchild-demo2>
+<router-outlet></router-outlet>

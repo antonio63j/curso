@@ -1,3 +1,29 @@
-<p>
-  viewchild-demo3 works!
-</p>
+
+<h3>@ViewChild using component and directive</h3>
+
+<div>
+  Cambiar color de los botones:
+  <input type="radio" name="rad" (click)= "changeColor('green')"> Green
+  <input type="radio" name="rad" (click)= "changeColor('cyan')"> Cyan
+  <input type="radio" name="rad" (click)= "changeColor('blue')"> Blue
+</div> 
+<hr>
+
+<div directiva-viewchild-demo2child>
+Contador manual:
+<br/>
+<button type="button" (click)="increase()">Increase</button>
+<button type="button" (click)="decrease()">Decrease</button>
+<br/><br/>
+Contador automático:
+<br/>
+<button type="button" (click)="startStopwatch()">Start</button>
+<button type="button" (click)="stopStopwatch()">Stop</button>
+<hr>
+</div>
+<app-viewchild-demo1child></app-viewchild-demo1child>
+<hr> 
+<button type="button" class="btn btn-secondary" routerLink="/viewchild">Home</button>
+
+<!-- <app-doc-fuentes-viewchild-demo1></app-doc-fuentes-viewchild-demo1>
+<router-outlet></router-outlet> -->
