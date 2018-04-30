@@ -12,6 +12,7 @@ export class ViewchildDemo2ChildDirective implements AfterViewInit {
   @Input ('appHighlight') highlightColor: string; 
   @Input () defaultColor: string;
 
+  // Si no se hace el cambio aquí, elRef.nativeElement será undefined
   ngAfterViewInit() {
     this.elRef.nativeElement.style.color = 'black';
   }
@@ -28,9 +29,7 @@ export class ViewchildDemo2ChildDirective implements AfterViewInit {
     this.elRef.nativeElement.style.color = color;
   }
 
-  changeBackground(color: string){
+  changeBackground(color: string) {
     this.elRef.nativeElement.style.backgroundColor = color;
-
   }
-
 }

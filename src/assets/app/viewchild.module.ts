@@ -12,6 +12,11 @@ import { ViewchildDemo1Component } from './viewchild-demo1/viewchild-demo1.compo
 import { ViewchildDemo1ChildComponent } from './viewchild-demo1/viewchild-demo1child.component';
 import { DocViewchildDemo1Component } from './viewchild-demo1/doc-viewchild-demo1.component';
 import { DocViewchildDemo2Component } from './viewchild-demo2/doc-viewchild-demo2.component';
+import { Cp1Component } from './viewchild-demo4/cp1.component';
+import { WriterComponent} from './viewchild-demo4/writer.component';
+import { MessageDirective } from './viewchild-demo4/message.directive';
+import { DocViewchildDemo4Component } from './viewchild-demo4/doc-viewchild-demo4.component';
+
 
 import { ViewchildHomeComponent } from './viewchild-home/viewchild-home.component';
 
@@ -29,7 +34,12 @@ import { ViewchildHomeComponent } from './viewchild-home/viewchild-home.componen
     ViewchildHomeComponent,
     ViewchildDemo1ChildComponent,
     DocViewchildDemo1Component,
-    DocViewchildDemo2Component
+    DocViewchildDemo2Component,
+    Cp1Component,
+    WriterComponent,
+    MessageDirective,
+    DocViewchildDemo4Component,
+
   ]
 })
 export class ViewchildModule { }

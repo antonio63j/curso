@@ -1,22 +1,25 @@
 <h3>@ViewChild using Directive</h3>
-Color Example:
-
-<div>
-  <h3>Asignación del color de texto utilizando el metodo change de la directiva:</h3>
-  <input type="radio" name="rad" (click)="changeColor('green')"> Green
-  <input type="radio" name="rad" (click)="changeColor('cyan')"> Cyan
-  <input type="radio" name="rad" (click)="changeColor('blue')"> Blue
+<h4>Asignación del color de texto utilizando el metodo change de la directiva:
+<div class="container-demo-texto">
+  
+    <input type="radio" name="rad" (click)="changeColor('green')"> Green
+    <input type="radio" name="rad" (click)="changeColor('cyan')"> Cyan
+    <input type="radio" name="rad" (click)="changeColor('blue')"> Blue
+  
 </div>
+</h4>
 <p appHighlight>Texto para probar cambio de color</p>
-<p appHighlight #texto2>Texto para probar cambio de color</p>
+<p appHighlight>Texto para probar cambio de color</p>
 <hr>
-<div>
-  <h3>Asignacion de color para background (color de appHighlight)</h3>
+<h4>Asignacion de color para background (color de appHighlight)
+<div class="container-demo-texto">
+  
   <input type="radio" name="colors" (click)="color='lightgreen'">Green
   <input type="radio" name="colors" (click)="color='yellow'">Yellow
   <input type="radio" name="colors" (click)="color='cyan'">Cyan
-  <input type="radio" name="colors" (click)="color=''">Reset sobre variable colorn
+  <input type="radio" name="colors" (click)="color=''">Reset sobre variable color
 </div>
+</h4>
 <p [appHighlight]="color">[appHighlight]="color"</p>
 <p [appHighlight]="color" defaultColor="violet"> [appHighlight]="color" defaultColor="violet"</p>
 <p [appHighlight]="'yellow'">[appHighlight]="'yellow'"</p>
@@ -25,7 +28,7 @@ Color Example:
 <p appHighlight>Sin valor de atributo, igual que el de arriba</p>
 <hr>
 
-<button type="button" class="btn btn-secondary" routerLink="/viewchild">Home</button>
+<button type="button" class="btn btn-primary" routerLink="/viewchild">Home</button>
 
 <app-doc-fuentes-viewchild-demo2></app-doc-fuentes-viewchild-demo2>
 <router-outlet></router-outlet>

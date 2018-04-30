@@ -18,12 +18,12 @@ export class ViewchildDemo1Component {
   decrease() {
     this.numberComponent.decreaseByOne();
   }
-  
+
   // Contador automático
   startStopwatch() {
     this.numberComponent.start();
-}
-stopStopwatch() {
+  }
+  stopStopwatch() {
     this.numberComponent.stop();
-}
+  }
 }
