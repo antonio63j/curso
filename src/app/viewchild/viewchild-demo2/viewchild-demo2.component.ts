@@ -7,13 +7,18 @@ import { ViewchildDemo2ChildDirective } from './viewchild-demo2child.directive';
 })
 
 export class ViewchildDemo2Component {
-
+  ocultarFuentes = true;
   color: string;
 
   @ViewChild(ViewchildDemo2ChildDirective)
   private cpColorDirective: ViewchildDemo2ChildDirective;
-  
+
   changeColor(color: string) {
     this.cpColorDirective.change(color);
   }
+
+  mostrarOcultarFuentes() {
+    this.ocultarFuentes = !this.ocultarFuentes;
+  }
 }
+

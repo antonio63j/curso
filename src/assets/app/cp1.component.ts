@@ -7,62 +7,72 @@ import { WriterComponent } from './writer.component';
 	templateUrl: './cp1.component.html'
 })
 export class Cp1Component implements AfterViewInit {
-    // QueryList + @ViewChildren + Directive
-    @ViewChildren(MessageDirective)
-    private msgList: QueryList<MessageDirective>;
+	// QueryList + @ViewChildren + Directive
+	@ViewChildren(MessageDirective)
+	private msgList: QueryList<MessageDirective>;
 
-    @ViewChild('msgTemp')
-    private msgTempRef: TemplateRef<any>;
+	@ViewChild('msgTemp')
+	private msgTempRef: TemplateRef<any>;
 
-    // QueryList + @ViewChildren + Component
-    @ViewChildren('bkWriter')
-    allWriters: QueryList<WriterComponent>;
+	// QueryList + @ViewChildren + Component
+	@ViewChildren('bkWriter')
+	allWriters: QueryList<WriterComponent>;
 
-    showAllWriter = false;
+	@ViewChildren('bkWriter')
+	allWritersElRef: QueryList<ElementRef>;
 
-   // QueryList + @ViewChildren + ElementRef
-   @ViewChildren('pname')
-   allPersons: QueryList<ElementRef>;
+	showAllWriter = false;
+
+	// QueryList + @ViewChildren + ElementRef
+	@ViewChildren('pname')
+	allPersons: QueryList<ElementRef>;
 
 	ngAfterViewInit() {
-		console.log('--- using QueryList.changes ---');
+		// Using QueryList.changes --- 
+		console.log('**** cambio en allWriters ****:');
 		this.allWriters.changes.subscribe(list => {
 			list.forEach(writer => console.log(writer.writerName + ' - ' + writer.bookName));
 		});
-		console.log('--- using QueryList.forEach ---');
-		this.msgList.forEach(messageDirective =>
-			messageDirective.viewContainerRef.createEmbeddedView(this.msgTempRef));
 
-		this.allWriters.forEach(writer => console.log(writer.writerName + ' - ' + writer.bookName));
+		// using QueryList.forEach
+		this.msgList.forEach(messDirective =>
+			messDirective.viewContainerRef.createEmbeddedView(this.msgTempRef));
 
-		console.log('--- using QueryList.length ---');
-		console.log(this.allWriters.length);
+		console.log('**** items de allWriters ****:');
+		this.allWriters.forEach(writer => console.log(JSON.stringify(writer)));
 
-		console.log('--- using QueryList.find ---');
-		let javaWriter = this.allWriters.find(writer => writer.bookName === 'Java Tutorials');
-		console.log(javaWriter.writerName);
+		const javaWriter = this.allWriters.find(writer => writer.bookName === 'Java Tutorials');
+		console.log('using QueryList.find, **** Nombre del autor del libro "Java Tutorials" ****:' + javaWriter.writerName);
 
-		console.log('--- using QueryList.map ---');
+		// using QueryList.map
+		console.log('**** Nombre de los escritores ****:');
 		let wnames = this.allWriters.map(writer => writer.writerName);
 		for (let name of wnames) {
 			console.log(name);
 		}
 
-		console.log('--- using QueryList.filter ---');
-		let writers = this.allWriters.filter(writer => writer.writerName === 'Krishna');
-		for (let w of writers) {
-			console.log(w.bookName);
+		// using QueryList.filter ---');
+		const writers = this.allWriters.filter(writer => writer.writerName === 'Krishna');
+		for (const w of writers) {
+			console.log('using QueryList.filter, **** Nombre del libro del autor "Krishma" ****:'+ w.bookName);
 		}
 
-		console.log('--- using QueryList.first ---');
-		let firstEl = this.allPersons.first;
-		console.log(firstEl.nativeElement.innerHTML);
+		console.log('**** Primera y ultima persona de la lista allPersons ****');
+		const firstEl = this.allPersons.first;
+		console.log('primer elemento =' + firstEl.nativeElement.innerHTML);
 
-		console.log('--- using QueryList.last ---');
-		let lastEl = this.allPersons.last;
-		console.log(lastEl.nativeElement.innerHTML);
+		const lastEl = this.allPersons.last;
+		console.log('ultimo elemento =' + lastEl.nativeElement.innerHTML);
 	}
 	onShowAllWriters() {
+		if (this.showAllWriter === true){
+			this.allWritersElRef.forEach(writer =>
+				console.log(writer.nativeElement.textContent));
+		} else {
+			this.allWritersElRef.forEach(writer =>
+				// writer.nativeElement.style.color = 'black');
+				console.log('writer:' + JSON.stringify(writer.nativeElement)));
+		}
 		this.showAllWriter = (this.showAllWriter === true) ? false : true;
 	}
 }

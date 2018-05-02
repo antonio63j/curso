@@ -16,6 +16,7 @@ import { Cp1Component } from './viewchild-demo4/cp1.component';
 import { WriterComponent} from './viewchild-demo4/writer.component';
 import { MessageDirective } from './viewchild-demo4/message.directive';
 import { DocViewchildDemo4Component } from './viewchild-demo4/doc-viewchild-demo4.component';
+import { ViewchildDemo5Component } from './viewchild-demo5/viewchild-demo5.component';
 
 
 import { ViewchildHomeComponent } from './viewchild-home/viewchild-home.component';
@@ -39,7 +40,7 @@ import { ViewchildHomeComponent } from './viewchild-home/viewchild-home.componen
     WriterComponent,
     MessageDirective,
     DocViewchildDemo4Component,
-
+    ViewchildDemo5Component
   ]
 })
 export class ViewchildModule { }

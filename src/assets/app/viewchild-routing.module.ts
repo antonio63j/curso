@@ -8,6 +8,8 @@ import { ViewchildHomeComponent } from './viewchild-home/viewchild-home.componen
 import { ViewchildDemo1Component } from './viewchild-demo1/viewchild-demo1.component';
 import { ViewchildDemo2Component } from './viewchild-demo2/viewchild-demo2.component';
 import { ViewchildDemo3Component } from './viewchild-demo3/viewchild-demo3.component';
+import { ViewchildDemo5Component } from './viewchild-demo5/viewchild-demo5.component';
+
 import { Cp1Component } from './viewchild-demo4/cp1.component';
 
 
@@ -18,6 +20,7 @@ const routes: Routes = [
   { path: 'demo2', component: ViewchildDemo2Component },
   { path: 'demo3', component: ViewchildDemo3Component },
   { path: 'demo4', component: Cp1Component },
+  { path: 'demo5', component: ViewchildDemo5Component },
   { path: '**', redirectTo: ''},
 ];
 

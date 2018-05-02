@@ -30,5 +30,13 @@
 
 <button type="button" class="btn btn-primary" routerLink="/viewchild">Home</button>
 
-<app-doc-fuentes-viewchild-demo2></app-doc-fuentes-viewchild-demo2>
-<router-outlet></router-outlet>
+<!-- Lineas dedicadas a documentacion
+-------------------------------- -->
+<div style="display: inline;" *ngIf="!ocultarFuentes">
+    <button type="button" class="btn btn-primary" (click)="mostrarOcultarFuentes()">Ocultar fuentes</button>
+    <app-doc-fuentes-viewchild-demo2></app-doc-fuentes-viewchild-demo2>
+    <router-outlet></router-outlet>
+ </div>   
+ <div style="display: inline;" *ngIf="ocultarFuentes">
+    <button type="button" class="btn btn-primary" (click)="mostrarOcultarFuentes()">Mostrar fuentes</button>
+ </div> 
