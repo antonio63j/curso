@@ -60,7 +60,7 @@ export class DocContentchildDemo1Component implements OnInit {
       title: 'Person Componente',
       code: '',
       file: 'assets/app/person.component.ts',
-      aread: 'assets/app/doc-contentchild-demo1.html',
+      read: 'assets/app/doc-contentchild-demo1.html',
       codeAread: ''
     }
   ];

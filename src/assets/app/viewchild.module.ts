@@ -17,8 +17,16 @@ import { WriterComponent} from './viewchild-demo4/writer.component';
 import { MessageDirective } from './viewchild-demo4/message.directive';
 import { DocViewchildDemo4Component } from './viewchild-demo4/doc-viewchild-demo4.component';
 import { ViewchildDemo5Component } from './viewchild-demo5/viewchild-demo5.component';
-
-
+import { BookDirective } from './contentchild-demo1/book.directive';
+import { EscritorComponent } from './contentchild-demo1/escritor.component';
+import { FavouriteBooksComponent } from './contentchild-demo1/favourite-books.component';
+import { CityComponent } from './contentchild-demo1/city.component';
+import { AddressComponent } from './contentchild-demo1/address.component';
+import { FavouriteCitiesComponent } from './contentchild-demo1/favourite-cities.component';
+import { FriendComponent } from './contentchild-demo1/friend.component';
+import { FavouriteFriendsComponent } from './contentchild-demo1/favourite-friends.component';
+import { PersonComponent } from './contentchild-demo1/person.component';
+import { DocContentchildDemo1Component } from './contentchild-demo1/doc-contentchild-demo1.component';
 import { ViewchildHomeComponent } from './viewchild-home/viewchild-home.component';
 
 @NgModule({
@@ -40,7 +48,18 @@ import { ViewchildHomeComponent } from './viewchild-home/viewchild-home.componen
     WriterComponent,
     MessageDirective,
     DocViewchildDemo4Component,
-    ViewchildDemo5Component
+    ViewchildDemo5Component,
+    BookDirective,
+    EscritorComponent,
+    FavouriteBooksComponent,
+    CityComponent,
+    AddressComponent,
+    FavouriteCitiesComponent,
+    FriendComponent,
+    FavouriteFriendsComponent,
+    PersonComponent,
+    DocContentchildDemo1Component
+
   ]
 })
 export class ViewchildModule { }

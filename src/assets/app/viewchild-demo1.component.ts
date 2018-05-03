@@ -13,6 +13,7 @@ import { ViewchildDemo1ChildComponent } from './viewchild-demo1child.component';
   `]
 })
 export class ViewchildDemo1Component {
+  ocultarFuentes = true;
 
   @ViewChild('botonespecial') botonEspecial: ElementRef;
 
@@ -39,4 +40,8 @@ export class ViewchildDemo1Component {
     this.numberComponent.stop();
     this.renderer.removeClass(this.botonEspecial.nativeElement, 'advertencia');
   }
+  mostrarOcultarFuentes () {
+   this.ocultarFuentes = !this.ocultarFuentes;
+  }
+
 }
