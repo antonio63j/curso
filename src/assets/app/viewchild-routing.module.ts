@@ -11,7 +11,8 @@ import { ViewchildDemo3Component } from './viewchild-demo3/viewchild-demo3.compo
 import { ViewchildDemo5Component } from './viewchild-demo5/viewchild-demo5.component';
 import { Cp1Component } from './viewchild-demo4/cp1.component';
 import { PersonComponent } from './contentchild-demo1/person.component';
-
+import {ContentChildDemo2Component } from './contentchild-demo2/contentchild-demo2.component';
+import {ContentChildDemo3Component } from './contentchild-demo3/contentchild-demo3.component';
 
 
 const routes: Routes = [
@@ -22,6 +23,8 @@ const routes: Routes = [
   { path: 'viewchild-demo4', component: Cp1Component },
   { path: 'viewchild-demo5', component: ViewchildDemo5Component },
   { path: 'contentchild-demo1', component: PersonComponent },
+  { path: 'contentchild-demo2', component: ContentChildDemo2Component},
+  { path: 'contentchild-demo3', component: ContentChildDemo3Component},
   { path: '**', redirectTo: ''},
 ];
 

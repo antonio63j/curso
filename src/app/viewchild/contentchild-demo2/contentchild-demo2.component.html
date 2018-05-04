@@ -1,0 +1,19 @@
+<tab>
+    <pane id="1" *ngIf="shouldShow"></pane>
+    <pane id="2" *ngIf="!shouldShow"></pane>
+    <pane id="3"></pane>
+  </tab>
+  <button (click)="toggle()">Toggle</button>
+  <hr>
+  <button type="button" class="btn btn-primary" routerLink="/viewchild">Home</button>
+  
+<!-- Lineas dedicadas a documentacion
+-------------------------------- -->
+<div style="display: inline;" *ngIf="!ocultarFuentes">
+	<button type="button" class="btn btn-primary" (click)="mostrarOcultarFuentes()">Ocultar fuentes</button>
+	<app-doc-fuentes-componentchild-demo2></app-doc-fuentes-componentchild-demo2>
+	<router-outlet></router-outlet>
+</div>   
+<div style="display: inline;" *ngIf="ocultarFuentes">
+	<button type="button" class="btn btn-primary" (click)="mostrarOcultarFuentes()">Mostrar fuentes</button>
+</div> 

@@ -2,17 +2,14 @@
     <p>
         <ul>
             <li>
-                @Input, @ViewChild, @HostListener
+                @Input, @ContentChild, @ContentChildren, QueryList
             </li>
         </ul>
         <h3>
 
             <p>
-                Con el decorador @ViewChild, el componente padre crea una instancia de la directiva. Y de esta forma se pueden utilizar propiedades
-                e invocar métodos de la directiva. Podemos cambiar por ejemplo el estilo del elemento con esa directiva,
-                pero sólo sobre el primer elemento que se encuentre en el template, como puede verse en la demo. Tanto @ViewChild como @ContentChild retornan
-                QueryList que nos proporciona un Observable sobre el que nos podemos subscribir para detectar los cambios
-                sobre esa lista.
+                Utilización directivas @ContentChild y ContentChildren. ContentChildren trabaja con QueryList en los componentes y ng-template en las vistas.
+                No queda claro como la directiva book y el componente city, tiene la misma estructura.
             </p>
         </h3>
     </p>

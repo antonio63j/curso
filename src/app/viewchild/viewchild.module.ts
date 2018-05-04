@@ -28,6 +28,15 @@ import { FavouriteFriendsComponent } from './contentchild-demo1/favourite-friend
 import { PersonComponent } from './contentchild-demo1/person.component';
 import { DocContentchildDemo1Component } from './contentchild-demo1/doc-contentchild-demo1.component';
 import { ViewchildHomeComponent } from './viewchild-home/viewchild-home.component';
+import { ContentChildDemo2Component } from './contentchild-demo2/contentchild-demo2.component';
+import { Pane } from './contentchild-demo2/contentchild-demo2.component';
+import { Tab } from './contentchild-demo2/contentchild-demo2.component';
+import { DocContentchildDemo2Component } from './contentchild-demo2/doc-contentchild-demo2.component';
+
+import { ContentChildDemo3Component } from './contentchild-demo3/contentchild-demo3.component';
+import { Pane3 } from './contentchild-demo3/contentchild-demo3.component';
+import { Tab3 } from './contentchild-demo3/contentchild-demo3.component';
+import { DocContentchildDemo3Component } from './contentchild-demo3/doc-contentchild-demo3.component';
 
 @NgModule({
   imports: [
@@ -58,8 +67,15 @@ import { ViewchildHomeComponent } from './viewchild-home/viewchild-home.componen
     FriendComponent,
     FavouriteFriendsComponent,
     PersonComponent,
-    DocContentchildDemo1Component
-
+    DocContentchildDemo1Component,
+    ContentChildDemo2Component,
+    Pane,
+    Tab,
+    DocContentchildDemo2Component,
+    ContentChildDemo3Component,
+    DocContentchildDemo3Component,
+    Pane3,
+    Tab3
   ]
 })
 export class ViewchildModule { }
