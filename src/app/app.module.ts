@@ -63,6 +63,7 @@ import { DocUsoDirectivaConfirmComponent } from './uso-directiva-confirm/doc-uso
 import { DocTextSnippetComponent } from './uso-directiva-test-snippets/doc-uso-directiva-test-snippets.component';
 import { TestDestroy } from './testdestroy/testdestroy.component';
 import { AppDestroy } from './testdestroy/testdestroy.component';
+import { PrimengTablaComponent } from './primeng-tabla/primeng-tabla.component';
 
 @NgModule({
   declarations: [
@@ -106,8 +107,9 @@ import { AppDestroy } from './testdestroy/testdestroy.component';
     DocUsodirectivainputpadreComponent,
     DocTextSnippetComponent,
     LoginComponent,
-    RegistroComponent
-    
+    RegistroComponent,
+    PrimengTablaComponent
+
   ],
   imports: [
     BrowserModule,

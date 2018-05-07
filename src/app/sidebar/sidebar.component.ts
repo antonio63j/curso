@@ -30,6 +30,7 @@ export const ROUTES: RouteInfo[] = [
     { path: 'comunicacion-observable', title: 'Comunicacion con observables', icon: 'pe-7s-news-paper', class: '' },
     { path: 'form-login', title: 'Formulario login', icon: 'pe-7s-news-paper', class: '' },
     { path: 'viewchild', title: '@ViewChild/ren @ContentChild/ren', icon: 'pe-7s-news-paper', class: '' },
+    { path: 'primeng-tabla', title: 'Tabla de PrimeNg', icon: 'pe-7s-news-paper', class: '' },
 
   ];
 
