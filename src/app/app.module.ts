@@ -1,5 +1,7 @@
 
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
@@ -21,6 +23,7 @@ import { ViewchildModule } from './viewchild/viewchild.module';
 import { RainbowDirectiveDirective } from './misdirectivas/rainbow-directive.directive';
 import { ConfirmDirectiveDirective } from './misdirectivas/confirm-directive.directive';
 import { TextSnippetDirective } from './misdirectivas/test-snippets.directive';
+
 // importacion de servicios
 import { ProveedoresService } from './proveedores/proveedores.service';
 
@@ -63,7 +66,6 @@ import { DocUsoDirectivaConfirmComponent } from './uso-directiva-confirm/doc-uso
 import { DocTextSnippetComponent } from './uso-directiva-test-snippets/doc-uso-directiva-test-snippets.component';
 import { TestDestroy } from './testdestroy/testdestroy.component';
 import { AppDestroy } from './testdestroy/testdestroy.component';
-import { PrimengTablaComponent } from './primeng-tabla/primeng-tabla.component';
 
 @NgModule({
   declarations: [
@@ -108,11 +110,11 @@ import { PrimengTablaComponent } from './primeng-tabla/primeng-tabla.component';
     DocTextSnippetComponent,
     LoginComponent,
     RegistroComponent,
-    PrimengTablaComponent
 
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     FormsModule,
     HttpModule,
     NavbarModule,
@@ -124,7 +126,6 @@ import { PrimengTablaComponent } from './primeng-tabla/primeng-tabla.component';
     DocFuentesModule,
     HighlightModule.forRoot(),
     ViewchildModule
-
     // LbdModule
   ],
   providers: [

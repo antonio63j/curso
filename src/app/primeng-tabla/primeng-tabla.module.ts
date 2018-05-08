@@ -1,6 +1,7 @@
+// Necesario quitar estos dos imports
+//import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+//import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
-import { BrowserModule } from '@angular/platform-browser';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
@@ -11,6 +12,7 @@ import { ButtonModule } from 'primeng/button';
 import { TableModule } from 'primeng/table';
 import { DialogModule } from 'primeng/dialog';
 
+
 import { PrimengTablaRoutingModule } from './primeng-tabla-routing.module';
 import { PrimengTablaComponent } from './primeng-tabla.component';
 
@@ -19,11 +21,11 @@ import { PrimengTablaComponent } from './primeng-tabla.component';
         PrimengTablaComponent
     ],
     imports: [
+  //    BrowserAnimationsModule,
+  //    NoopAnimationsModule,
         PrimengTablaRoutingModule,
         CommonModule,
         RouterModule,
-        BrowserModule,
-        BrowserAnimationsModule,
         FormsModule,
         TableModule,
         HttpClientModule,
