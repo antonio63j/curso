@@ -7,7 +7,8 @@ import { Subscription } from 'rxjs/Subscription';
 @Component({
   selector: 'app-editpres',
   templateUrl: './editpres.component.html',
-  styleUrls: ['./editpres.component.css']
+  styleUrls: ['./editpres.component.css'],
+  providers: [PresupuestosService]
 })
 export class EditpresComponent implements OnInit, OnDestroy {
 

@@ -26,10 +26,11 @@ import { DocFuentesModule } from '../doc-fuentes/doc-fuentes.module';
     PresupuestosHeaderComponent,
     AddpresComponent,
     EditpresComponent,
-    DocPresupuestosComponent
+    DocPresupuestosComponent,
+
   ],
   providers: [
-    PresupuestosService
+    //PresupuestosService
   ]
 })
 export class PresupuestosModule { }

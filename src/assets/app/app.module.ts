@@ -1,5 +1,7 @@
 
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
@@ -21,6 +23,7 @@ import { ViewchildModule } from './viewchild/viewchild.module';
 import { RainbowDirectiveDirective } from './misdirectivas/rainbow-directive.directive';
 import { ConfirmDirectiveDirective } from './misdirectivas/confirm-directive.directive';
 import { TextSnippetDirective } from './misdirectivas/test-snippets.directive';
+
 // importacion de servicios
 import { ProveedoresService } from './proveedores/proveedores.service';
 
@@ -106,11 +109,12 @@ import { AppDestroy } from './testdestroy/testdestroy.component';
     DocUsodirectivainputpadreComponent,
     DocTextSnippetComponent,
     LoginComponent,
-    RegistroComponent
-    
+    RegistroComponent,
+
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     FormsModule,
     HttpModule,
     NavbarModule,
@@ -122,7 +126,6 @@ import { AppDestroy } from './testdestroy/testdestroy.component';
     DocFuentesModule,
     HighlightModule.forRoot(),
     ViewchildModule
-
     // LbdModule
   ],
   providers: [

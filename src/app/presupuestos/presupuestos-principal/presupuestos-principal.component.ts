@@ -4,7 +4,8 @@ import {PresupuestosService} from '../presupuestos.service';
 @Component({
   selector: 'app-presupuestos-principal',
   templateUrl: './presupuestos-principal.component.html',
-  styleUrls: ['./presupuestos-principal.component.scss']
+  styleUrls: ['./presupuestos-principal.component.scss'],
+  providers: [PresupuestosService]
 })
 export class PresupuestosPrincipalComponent implements OnInit {
 

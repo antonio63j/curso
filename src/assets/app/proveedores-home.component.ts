@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ProveedoresService } from '../proveedores.service';
 
 @Component({
@@ -8,7 +8,7 @@ import { ProveedoresService } from '../proveedores.service';
   // providers: [ProveedoresService]
 
 })
-export class ProveedoresHomeComponent implements OnInit {
+export class ProveedoresHomeComponent implements OnInit, OnDestroy {
   mensaje: string;
   proveedores: any[] = [];
   constructor(private proveedoresService: ProveedoresService) {
@@ -24,6 +24,9 @@ export class ProveedoresHomeComponent implements OnInit {
     this.proveedores = this.proveedoresService.getProveedores();
 
   }
-  // tslint:disable-next-line:use-life-cycle-interface
-  ngOnDestroy() { }
+
+  ngOnDestroy () {
+    console.log( 'En ngOnDestroy de ProveedoresHomeComponent');
+  }
+
 }

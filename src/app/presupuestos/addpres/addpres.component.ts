@@ -7,7 +7,8 @@ import { Subscription } from 'rxjs/Subscription';
 @Component({
   selector: 'app-addpres',
   templateUrl: './addpres.component.html',
-  styleUrls: ['./addpres.component.css']
+  styleUrls: ['./addpres.component.css'],
+  providers: [PresupuestosService]
 })
 
 export class AddpresComponent implements OnInit, OnDestroy {

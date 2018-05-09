@@ -1,8 +1,8 @@
-import { Injectable } from '@angular/core';
+import { Injectable, OnDestroy } from '@angular/core';
 import { ProveedorModelo } from './proveedor-modelo';
 
 @Injectable()
-export class ProveedoresService {
+export class ProveedoresService implements OnDestroy {
   proveedores: ProveedorModelo[] = [];
   proveedoresList: ProveedorModelo[] = [];
 
@@ -60,5 +60,9 @@ export class ProveedoresService {
      proveedorOld = this.proveedores.find(this.buscaProveedorByEmail, proveedor.email);
      const index = this.proveedores.indexOf(proveedorOld);
      this.proveedores[index] = proveedor;
+  }
+
+  ngOnDestroy () {
+    console.log ('En ngOnDestroy');
   }
 }

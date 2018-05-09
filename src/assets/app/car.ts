@@ -5,5 +5,4 @@ export interface Car {
     color?;
     price?;
     saleDate?;
-    provincia?;
 }

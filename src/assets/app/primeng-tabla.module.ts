@@ -7,12 +7,11 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-
 import { InputTextModule } from 'primeng/inputtext';
 import { ButtonModule } from 'primeng/button';
 import { TableModule } from 'primeng/table';
 import { DialogModule } from 'primeng/dialog';
-import { CalendarModule } from 'primeng/calendar';
+
 
 import { PrimengTablaRoutingModule } from './primeng-tabla-routing.module';
 import { PrimengTablaComponent } from './primeng-tabla.component';
@@ -32,8 +31,7 @@ import { PrimengTablaComponent } from './primeng-tabla.component';
         HttpClientModule,
         InputTextModule,
         DialogModule,
-        ButtonModule,
-        CalendarModule,  
+        ButtonModule
     ],
     providers: []
 

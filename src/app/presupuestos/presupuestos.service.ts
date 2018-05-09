@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { OnDestroy } from '@angular/core';
 import {Headers, Http, Response} from '@angular/http';
 // import { Observable} from 'rxjs/Rx';
 import 'rxjs/Rx';
@@ -51,6 +52,10 @@ export class PresupuestosService {
   const url = `${ this.presupuestoURL }/${ id$ }.json`;
   return this.http.delete( url )
     .map( res => res.json());
+  }
+
+  ngOnDestroy () {
+    console.log('Service PresupuestosService destroy');
   }
 
 }

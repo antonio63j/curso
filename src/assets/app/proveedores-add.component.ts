@@ -1,17 +1,17 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 
 import { ProveedorModelo} from '../proveedor-modelo';
 import { ProveedoresService } from '../proveedores.service';
-import { PROVINCIAS } from '../provincias-mock';
+import { PROVINCIAS } from '../../mock-data/provincias-mock';
 
 @Component({
   selector: 'app-proveedores-add',
   templateUrl: './proveedores-add.component.html',
   styleUrls: ['./proveedores-add.component.scss']
 })
-export class ProveedoresAddComponent implements OnInit {
+export class ProveedoresAddComponent implements OnInit, OnDestroy {
 
   modeloProveedor: ProveedorModelo;
   provincias: {}[] = PROVINCIAS;
@@ -38,6 +38,10 @@ export class ProveedoresAddComponent implements OnInit {
     // this.formpro.reset();
     this.proveedorServicio.addProveedor (this.modeloProveedor);
     this.router.navigate(['proveedoreshome']);
+  }
+
+  ngOnDestroy () {
+    console.log( 'En ngOnDestroy de ProveedoresAddComponent');
   }
 
 }

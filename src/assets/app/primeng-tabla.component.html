@@ -1,4 +1,4 @@
-<p-table [columns]="cols" [value]="cars" selectionMode="single" [(selection)]="selectedCar" (onRowSelect)="onRowSelect($event)" [paginator]="true" rows="7">
+<p-table [columns]="cols" [value]="cars" selectionMode="single" [(selection)]="selectedCar" (onRowSelect)="onRowSelect($event)" [paginator]="true" rows="10">
   <ng-template pTemplate="header" let-columns>
       <tr>
           <th *ngFor="let col of columns">
@@ -34,33 +34,7 @@
       <div class="ui-g-8"><input pInputText id="brand" [(ngModel)]="car.brand" /></div>
       
       <div class="ui-g-4"><label for="color">Color</label></div>
-      <div class="ui-g-8">
-          <!-- <input pInputText id="color" [(ngModel)]="car.color" /> -->
-          <select [(ngModel)]="car.color">
-                <option value="" [disabled]="true">Seleccione color</option>
-                <option value=Orange>ORANGE</option>
-                <option value=Black>BLACK</option>
-                <option value=Gray>GRAY</option>
-                <option value=Red>RED</option>
-          </select> 
-      </div>
-      <div class="ui-g-4"><label for="saleDate">Sale date</label></div>
-      <div class="ui-g-8">
-            <p-calendar [(ngModel)]="car.saleDate" [inline]="true" [locale] = "es" 
-            dateFormat="dd/mm/yy" dataType="string" >
-            </p-calendar>
-      </div>
-      <div class="ui-g-4"><label for="provincia">Provincia</label></div>
-      <div class="ui-g-8">
-            <select 
-            [(ngModel)]="car.provincia">
-            <option value="" [disabled]="true">Seleccione la provincia</option>
-            <option *ngFor="let provincia of provincias"
-              [value]="provincia.codigo">{{provincia.descripcion}}
-            </option>
-   </select>    
-      </div>
-
+      <div class="ui-g-8"><input pInputText id="color" [(ngModel)]="car.color" /></div>
   </div>
   <p-footer>
       <div class="ui-dialog-buttonpane ui-helper-clearfix">

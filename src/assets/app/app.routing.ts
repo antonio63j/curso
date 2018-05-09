@@ -50,6 +50,7 @@ const routes: Routes = [
   {path: 'form-login', component: LoginComponent},
   {path: 'registro', component: RegistroComponent},
   {path: 'viewchild', loadChildren: './viewchild/viewchild.module#ViewchildModule'},
+  {path: 'primeng-tabla', loadChildren: './primeng-tabla/primeng-tabla.module#PrimengTablaModule'},
   {path: '**', redirectTo: 'fechas', pathMatch: 'full'},
 
 ];
