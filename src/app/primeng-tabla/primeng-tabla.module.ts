@@ -14,11 +14,15 @@ import { TableModule } from 'primeng/table';
 import { DialogModule } from 'primeng/dialog';
 import { CalendarModule } from 'primeng/calendar';
 
+// Pipes
+import { ShowcapitalPipe } from '../mispipes/showcapital.pipe';
+// Compnents
 import { PrimengTablaRoutingModule } from './primeng-tabla-routing.module';
 import { PrimengTablaComponent } from './primeng-tabla.component';
 
 @NgModule({
     declarations: [
+        ShowcapitalPipe,
         PrimengTablaComponent
     ],
     imports: [
@@ -33,7 +37,7 @@ import { PrimengTablaComponent } from './primeng-tabla.component';
         InputTextModule,
         DialogModule,
         ButtonModule,
-        CalendarModule,  
+        CalendarModule,
     ],
     providers: []
 
