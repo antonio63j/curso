@@ -51,6 +51,8 @@ const routes: Routes = [
   {path: 'registro', component: RegistroComponent},
   {path: 'viewchild', loadChildren: './viewchild/viewchild.module#ViewchildModule'},
   {path: 'primeng-tabla', loadChildren: './primeng-tabla/primeng-tabla.module#PrimengTablaModule'},
+  {path: 'primeng-panel-menu', loadChildren: './primeng-panelmenu/primeng-panelmenu.module#PrimengPanelmenuModule'},
+
   {path: '**', redirectTo: 'fechas', pathMatch: 'full'},
 
 ];

@@ -31,6 +31,7 @@ export const ROUTES: RouteInfo[] = [
     { path: 'form-login', title: 'Formulario login', icon: 'pe-7s-news-paper', class: '' },
     { path: 'viewchild', title: '@ViewChild/ren @ContentChild/ren', icon: 'pe-7s-news-paper', class: '' },
     { path: 'primeng-tabla', title: 'Tabla de PrimeNg', icon: 'pe-7s-news-paper', class: '' },
+    { path: 'primeng-panel-menu', title: 'Panel menu de PrimeNg', icon: 'pe-7s-news-paper', class: '' },
 
   ];
 
