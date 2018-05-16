@@ -1,0 +1,7 @@
+
+grep -rnwi --exclude-dir=node_modules --exclude-dir=assets  . -e $1
+
+#i stands for ignore case (optional in your case).
+#R stands for recursive.
+#l stands for "show the file name, not the result itself".
+#/ stands for starting at the root of your machine.
