@@ -2,17 +2,18 @@
     <p>
         
             <ul>
-                Desde componente padrea se cambia el valor un string y del modelos desarrollador definidos con @Input en el componente hijo.
-                Desde el componente hijo, vemos los camibios con OnChanges pero solo del string, del modelo no. Los cambios
-                se hacen periódicamente con setInterval.
+                Desde el html del componente padre, se invoca al componente hijo (viewmodelo.component.ts) con
+                  <strong> &lt;app-viewmodelo [textoprueba]=&quot;msg&quot; [desarrollador] =&quot;desa&quot;&lt;/app-viewmodelo&gt;
+                  </strong>. Las variables textoprueba y desa deberan ser declados con @input en el componente hijo, que registrará los cambios realizados
+                en el formulario y en el input. Estos cambios son recogidos mediante el procedimiento ngOnChanges.
+                También podemos observar como desde el comp. padre podemos alterar el nombre del desarrollador en el formulario 
+                de su html asociado.
                 <li>
-                    @Input en componente hijo
+                    @Input, ngOnChanges en componente hijo
                 </li>
+
                 <li>
-                    ngOnChanges en componente hijo
-                </li>
-                <li>
-                    setInterval con el correpondiente clearInterval y delete timerInterval
+                    setInterval, clearInterval, delete timerInterval, NgForm (@angular/forms) en componete padre
                 </li>
             </ul>
         

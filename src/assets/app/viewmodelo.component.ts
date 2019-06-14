@@ -9,20 +9,31 @@ import { Desarrollador } from '../modelo/desarrollador.modelo';
 
 export class ViewmodeloComponent implements OnInit, OnChanges {
 
-  @Input () textoprueba: string;
-  @Input () desarrollador: Desarrollador;
-  textoprueba2: string;
+  @Input() textoprueba: string;
+  @Input() desarrollador: Desarrollador;
+
+  allMsgChangeLogs: string[] = [];
+  allDesarrolladoresChangeLogs: string[] = [];
 
   constructor() { }
 
   ngOnInit() { }
 
   ngOnChanges(changes: SimpleChanges) {
-    const textoprueba: SimpleChange = changes.textoprueba;
-    console.log(' textoprueba.previousValue: ', textoprueba.previousValue);
-    console.log('textoprueba.currentValue: ', textoprueba.currentValue);
-    console.log('textoprueba: ', textoprueba);
-    console.log('this.desarrollador.nombre:', this.desarrollador.nombre);
-    this.textoprueba2 = textoprueba.currentValue.toUpperCase();
+
+    // tslint:disable-next-line:forin
+    for (const propName in changes) {
+      const change = changes[propName];
+
+      const curVal = JSON.stringify(change.currentValue);
+      const prevVal = JSON.stringify(change.previousValue);
+      const changeLog = `${propName}: currentValue = ${curVal}, previousValue = ${prevVal}`;
+
+      if (propName === 'textoprueba') {
+        this.allMsgChangeLogs.push(changeLog);
+      } else if (propName === 'desarrollador') {
+        this.allDesarrolladoresChangeLogs.push(changeLog);
+      }
+    }
   }
 }
