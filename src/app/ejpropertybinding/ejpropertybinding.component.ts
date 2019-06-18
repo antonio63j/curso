@@ -9,12 +9,13 @@ import { Component, OnInit } from '@angular/core';
 export class EjpropertybindingComponent implements OnInit {
   codehtml; codets: string;
 
-  texto = 'Escribe algo';
+  texto = 'Valor inicial de la variable texto';
   angularLogo = 'https://academia-binaria.com/images/tutorial-angular-5_5_inject.png';
+
   constructor() {
-    setTimeout(() => { this.texto = 'por favor...'; }, 3000);
   }
 
-  ngOnInit() { }
-
+  ngOnInit() {
+    setTimeout(() => { this.texto = 'nuevo valor asingado por el componente'; }, 4000);
+   }
 }

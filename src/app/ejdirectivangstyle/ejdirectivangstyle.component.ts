@@ -12,6 +12,10 @@ export class EjdirectivangstyleComponent implements OnInit {
 
   constructor() { }
 
+  ngOnInit() {
+    this.puntuacion = 5;
+  }
+
   setColor() {
     this.estiloAplicado = {
       'font-style': this.puntuacion >= 5 ? 'italic' : 'normal',
@@ -20,6 +24,4 @@ export class EjdirectivangstyleComponent implements OnInit {
     };
     return this.puntuacion >= 5 ? 'green' : 'red';
   }
-
-  ngOnInit() { }
 }

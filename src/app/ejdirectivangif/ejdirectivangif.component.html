@@ -1,7 +1,7 @@
   <br><app-fechaactual></app-fechaactual><br>
   <label>Nombre y Apellidos</label>
   <input type="text" class="form-control" [(ngModel)]="nombre1" placeholder="Complete su nombre y apellidos">
-  <button type="submit" class="btn btn-primary" *ngIf="nombre1">Enviar</button>
+  <button type="submit" class="btn btn-primary" *ngIf="nombre1" (click)="sendnombre1(nombre1)">Enviar</button>
   <hr>
 
 <label>Nombre y Apellidos</label>
@@ -20,6 +20,9 @@
 <ng-template #incorrecto>
   <h4>Lo siento, inténtelo de nuevo</h4>
 </ng-template>
+<br>
+<button type="submit" class="btn btn-primary" (click)="mostrarVarsEnLog()">Mostrar variables en log consola</button>
 
 <app-doc-fuentes-ejdirectivangif></app-doc-fuentes-ejdirectivangif> 
 <router-outlet></router-outlet>
+
