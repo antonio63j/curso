@@ -2,15 +2,19 @@
     <p>
         <ul>
             <li>
-                @Input, @ViewChild, @HostListener
+                @Input, @ViewChild, @HostListener, @Injectable, Observable
             </li>
         </ul>
         <h3>
 
             <p>
                 Con el decorador @ViewChild, el componente padre crea una instancia de la directiva. Y de esta forma puede se pueden utilizar propiedades
-                e invocar métodos de la directiva. Podemos cambiar por ejemplo el estilo del elemento con esa directiva,
-                pero sólo sobre el primer elemento, como puede verse en la demo.
+                e invocar métodos de la directiva.
+                Con el decorador @Input, la directiva obtiene valor para defaulcolor y el color de background
+                Con @hostListener la directiva obtiene los eventos sobre la direcitva de la vista para cambiar el background
+                Con Subject y observable, el emisor que en este caso es el componente padre, envía mensajes y las ocho instancias de la directiva, para que desde 
+                esta directiva se cabmie el color de texto mediante elRef.nativeElement.style.color
+
             </p>
         </h3>
     </p>

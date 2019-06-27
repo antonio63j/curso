@@ -1,5 +1,5 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { NgForm } from '@angular/forms';
+/* import { NgForm } from '@angular/forms';*/
 import { ProveedoresService } from '../proveedores.service';
 import { Router, ActivatedRoute } from '@angular/router';
 import { ProveedorModelo } from '../proveedor-modelo';
@@ -21,8 +21,6 @@ export class ProveedoresEditComponent implements OnInit, OnDestroy {
     private proveedoresService: ProveedoresService,
     private router: Router,
     private activatedRouter: ActivatedRoute) {
-    console.log('En constructor de ProveedoresEditComponent');
-
     this.activatedRouter.params
       .subscribe(parametros => {
         this.idEmail = parametros['email'];

@@ -7,7 +7,7 @@ import { ViewchildRoutingModule } from './viewchild-routing.module';
 
 import { ViewchildDemo3Component } from './viewchild-demo3/viewchild-demo3.component';
 import { ViewchildDemo2Component } from './viewchild-demo2/viewchild-demo2.component';
-import { ViewchildDemo2ChildDirective } from './viewchild-demo2/viewchild-demo2child.directive';
+import { DirectivamenuDirective } from './viewchild-demo2/viewchild-demo2child.directive';
 import { ViewchildDemo1Component } from './viewchild-demo1/viewchild-demo1.component';
 import { ViewchildDemo1ChildComponent } from './viewchild-demo1/viewchild-demo1child.component';
 import { DocViewchildDemo1Component } from './viewchild-demo1/doc-viewchild-demo1.component';
@@ -37,6 +37,7 @@ import { ContentChildDemo3Component } from './contentchild-demo3/contentchild-de
 import { Pane3 } from './contentchild-demo3/contentchild-demo3.component';
 import { Tab3 } from './contentchild-demo3/contentchild-demo3.component';
 import { DocContentchildDemo3Component } from './contentchild-demo3/doc-contentchild-demo3.component';
+ import { ColorService} from './viewchild-demo2/services/color.service';
 
 @NgModule({
   imports: [
@@ -47,7 +48,7 @@ import { DocContentchildDemo3Component } from './contentchild-demo3/doc-contentc
   declarations: [
     ViewchildDemo3Component,
     ViewchildDemo2Component,
-    ViewchildDemo2ChildDirective,
+    DirectivamenuDirective,
     ViewchildDemo1Component,
     ViewchildHomeComponent,
     ViewchildDemo1ChildComponent,
@@ -76,6 +77,7 @@ import { DocContentchildDemo3Component } from './contentchild-demo3/doc-contentc
     DocContentchildDemo3Component,
     Pane3,
     Tab3
-  ]
+  ],
+  providers : [ColorService]
 })
 export class ViewchildModule { }

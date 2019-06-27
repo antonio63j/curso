@@ -1,14 +1,16 @@
 <div class="container-demo">
-    <div class="container-demo-texto">
-      <p>El servicio local se destruye cuando el componente se destruye</p>
-      <p>@Inyectable()</p>
-    </div> 
-<testdestroy *ngIf="istestdestroy">
-    <p> Veras este texto si istestdestory es true</p>
-</testdestroy>
+  <div class="container-demo-texto">
+    <p>El servicio local se destruye cuando el componente se destruye</p>
+    <p>@Inyectable()</p>
+  </div>
+  <testdestroy *ngIf="istestdestroy">
+      <p> HOla</p>
+    </testdestroy>
+
+  <testdestroy *ngIf="istestdestroy">
+    <p> Esto nunca será visible</p>
+  </testdestroy>
+
+
 </div>
 
-<!-- La vista
-<pre><code highlight [code]="codehtml">Template</code></pre>
-El componente
-<pre><code highlight [code]="codets"> Component</code></pre> -->

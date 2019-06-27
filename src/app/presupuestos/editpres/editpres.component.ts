@@ -30,11 +30,11 @@ export class EditpresComponent implements OnInit, OnDestroy {
     this.subscriptionParams = this.activatedRouter.params
       .subscribe(parametros => {
         this.id = parametros['id'];
-        console.log ('parametros = ' , parametros);
       });
   }
 
   tratarParams (id: string) {
+    // La subscripcion pasa a hacerse desde la vista con: <div *ngIf="presupuestoObs | async as presupuesto; else loading">
 /*     this.subscriptionGetPresupuesto = this.presupuestoService.getPresupuesto(id)
     .subscribe(unPresupuesto => this.presupuesto = unPresupuesto); */
      this.presupuestoObs = this.presupuestoService.getPresupuesto(id);
@@ -51,11 +51,12 @@ export class EditpresComponent implements OnInit, OnDestroy {
       iva: this.iva,
       total: this.total
     });
-    this.onChanges();
+    this.subscripcionCambios();
   }
 
-  onChanges(): void {
+  subscripcionCambios () {
     this.subscriptionChanges = this.presupuestoForm.valueChanges.subscribe(valor => {
+      console.log('Gestionando cambios por subscripcion');
       this.base = valor.base;
       this.tipo = valor.tipo;
       this.presupuestoForm.value.iva = this.base * this.tipo;
@@ -88,11 +89,20 @@ export class EditpresComponent implements OnInit, OnDestroy {
 
   ngOnDestroy() {
     console.log('en ngOnDestroy(), realizando unsubscribes');
-/*     this.subscriptionParams.unsubscribe();
-    this.subscriptionGetPresupuesto.unsubscribe();
+    if (this.subscriptionParams) {
+      this.subscriptionParams.unsubscribe();
+      console.log ('realizado unsubscrition de subscriptionParams');
+    }
     if (this.subscriptionChanges) {
       this.subscriptionChanges.unsubscribe();
-    } */
+      console.log ('realizado unsubscrition de subscriptionChanges');
+    }
+
+    /*
+    if (this.subscriptionGetPresupuesto) {
+       this.subscriptionGetPresupuesto.unsubscribe();
+       console.log ('realizado unsubscrition de subscriptionParams');
+    }*/
   }
 
 }

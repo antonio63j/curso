@@ -12,7 +12,7 @@ import { ProveedoresAddComponent } from './proveedores-add/proveedores-add.compo
 import { ProveedoresHeaderComponent } from './proveedores-header/proveedores-header.component';
 import { FormsModule } from '@angular/forms';
 import { ProveedoresEditComponent } from './proveedores-edit/proveedores-edit.component';
-import { HighlightModule } from 'ngx-highlightjs';
+// import { HighlightModule } from 'ngx-highlightjs';
 
 import { DocProveedoresHomeComponent } from './proveedores-home/doc-proveedores-home.component';
 import { DocProveedoresAddComponent } from './proveedores-add/doc-proveedores-add.component';

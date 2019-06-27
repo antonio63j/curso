@@ -1,6 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Subscription } from 'rxjs/Subscription';
-
+import { MensajeDelObsevable } from '../../../modelo/mensajeDelObservable.modelo';
 import { MessageService } from '../../services/message.service';
 
 @Component({
@@ -10,7 +10,8 @@ import { MessageService } from '../../services/message.service';
 })
 export class Receptor2Component implements OnInit, OnDestroy {
 
-  message: any;
+  // message: any;
+  message: MensajeDelObsevable;
   subscription: Subscription;
 
   constructor(private messageService: MessageService) {

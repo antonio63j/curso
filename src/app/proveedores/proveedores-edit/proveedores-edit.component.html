@@ -2,85 +2,53 @@
   <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset 2">
     <h2>Modifición proveedor (formulario Template-Driven)</h2>
     <form (ngSubmit)="onSubmit(formpro)" #formpro="ngForm" autocomplete="on">
-        <div class="form-group">
-          <label for="nombre">Nombre</label>
-          <i class="fa fa-check-circle check"
-               *ngIf="nombre.valid"></i>
-          <i class="fa fa-exclamation-circle uncheck"
-               *ngIf="nombre.invalid &&
+      <div class="form-group">
+        <label for="nombre">Nombre</label>
+        <i class="fa fa-check-circle check" *ngIf="nombre.valid"></i>
+        <i class="fa fa-exclamation-circle uncheck" *ngIf="nombre.invalid &&
                nombre.touched"></i>
 
-          <input type="text"
-                 class="form-control"
-                 id="nombre"
-                 required
-                 [(ngModel)]="modeloProveedor.nombre" 
-                 name="nombre"
-                 #nombre="ngModel">
-        </div>
-        <div class="form-group">
-          <label>C.I.F.</label>
-          <input type="text"
-                 class="form-control"
-                 id="cif"
-                 name="cif"
-                 [(ngModel)]="modeloProveedor.cif"
-          >
-        </div>
-        <div class="form-group">
-          <label>Dirección</label>
-          <input type="text"
-                 class="form-control"
-                 id="direccion"
-                 name="direccion"
-                 required
-                 [(ngModel)]="modeloProveedor.direccion"
-                 #direccion="ngModel">
-        </div>
+        <input type="text" class="form-control" id="nombre" required [(ngModel)]="modeloProveedor.nombre" name="nombre"
+          #nombre="ngModel">
+      </div>
+      <div class="form-group">
+        <label>C.I.F.</label>
+        <input type="text" class="form-control" id="cif" name="cif" [(ngModel)]="modeloProveedor.cif">
+      </div>
+      <div class="form-group">
+        <label>Dirección</label>
+        <input type="text" class="form-control" id="direccion" name="direccion" required
+          [(ngModel)]="modeloProveedor.direccion" #direccion="ngModel">
+      </div>
 
-        <div class="form-group">
-          <label for ="provincia">Provincia</label>
-          <select class="form-control"
-                   id="provincia"
-                   [(ngModel)]="modeloProveedor.provincia"
-                   required
-                   name="provincia"
-                   #provincia="ngModel">
-                   <option value="" [disabled]="true">Seleccione la provincia</option>
-                   <option *ngFor="let provincia of provincias"
-                     [value]="provincia.codigo">{{provincia.descripcion}}
-                   </option>
-          </select>
-        </div>
+      <div class="form-group">
+        <label for="provincia">Provincia</label>
+        <select class="form-control" id="provincia" [(ngModel)]="modeloProveedor.provincia" required name="provincia"
+          #provincia="ngModel">
+          <option value="" [disabled]="true">Seleccione la provincia</option>
+          <option *ngFor="let provincia of provincias" [value]="provincia.codigo">{{provincia.descripcion}}
+          </option>
+        </select>
+      </div>
 
-        <div class="form-group">
-          <label for="email">Correo Electrónico</label>
-          <i class="fa fa-check-circle check"
-             *ngIf="email.valid">
-          </i>
-          <i class="fa fa-exclamation-circle uncheck" *ngIf="email.invalid && email.touched">
-          </i>
-          <input
-            type="text"
-            class="form-control"
-            id="email"
-            [(ngModel)]="modeloProveedor.email"
-            name="email"
-            required
-            email #email="ngModel">
-          <p class="alert alert-danger" *ngIf="email.invalid && email.touched">
-             Por favor introduzca una dirección de correo correcta.
-          </p>
-
-        </div>
-        <p class="alert alert-danger "
-           *ngIf="!formpro.form.valid">Por favor complete todos los campos
+      <div class="form-group">
+        <label for="email">Correo Electrónico</label>
+        <i class="fa fa-check-circle check" *ngIf="email.valid">
+        </i>
+        <i class="fa fa-exclamation-circle uncheck" *ngIf="email.invalid && email.touched">
+        </i>
+        <input type="text" class="form-control" id="email" [(ngModel)]="modeloProveedor.email" name="email" required
+          email #email="ngModel">
+        <p class="alert alert-danger" *ngIf="email.invalid && email.touched">
+          Por favor introduzca una dirección de correo correcta.
         </p>
-        <button type="submit"
-                class="btn btn-success"
-                [disabled]="!formpro.form.valid">Actualizar
-        </button>
-        <a class="btn btn-danger" routerLink="/proveedoreshome">Salir</a>
+
+      </div>
+      <p class="alert alert-danger " *ngIf="!formpro.form.valid">Por favor complete todos los campos
+      </p>
+      <button type="submit" class="btn btn-success" [disabled]="!formpro.form.valid">Actualizar
+      </button>
+      <a class="btn btn-danger" routerLink="/proveedoreshome">Salir</a>
 
 
       <hr>
@@ -90,12 +58,12 @@
       <pre>{{formpro.status | json}}</pre>
       <h4> Mostramos el estado del campo Correo Electrónico</h4>
       <pre> Estado Dirty: {{email.dirty }}</pre>
-      <pre> Estado Pristine: {{formpro.controls.email.pristine }}</pre>
-      <pre> Estado Touched: {{formpro.controls.email.touched }}</pre>
-      <pre> Estado Valid: {{formpro.controls.email.valid }}</pre>
+      <pre> Estado Pristine: {{email.pristine }}</pre>
+      <pre> Estado Touched: {{email.touched }}</pre>
+      <pre> Estado Valid: {{email.valid }}</pre>
       <pre> Estado Invalid: {{formpro.controls.email.invalid }}</pre>
 
-     </form>
+    </form>
     <hr>
     <pre>{{ proveedor | json }}</pre>
     <hr>

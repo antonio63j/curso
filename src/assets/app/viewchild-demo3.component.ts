@@ -1,6 +1,6 @@
 import { Component, ViewChild } from '@angular/core';
 import { ViewchildDemo1ChildComponent } from '../viewchild-demo1/viewchild-demo1child.component';
-import { ViewchildDemo2ChildDirective } from '../viewchild-demo2/viewchild-demo2child.directive';
+import { DirectivamenuDirective } from '../viewchild-demo2/viewchild-demo2child.directive';
 
 @Component({
   selector: 'app-viewchild-demo3',
@@ -9,8 +9,8 @@ import { ViewchildDemo2ChildDirective } from '../viewchild-demo2/viewchild-demo2
 
 export class ViewchildDemo3Component {
 
-  @ViewChild(ViewchildDemo2ChildDirective)
-  private cpColorDirective: ViewchildDemo2ChildDirective;
+  @ViewChild(DirectivamenuDirective)
+  private cpColorDirective: DirectivamenuDirective;
 
   @ViewChild(ViewchildDemo1ChildComponent)
   private numberComponent: ViewchildDemo1ChildComponent;

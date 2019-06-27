@@ -19,7 +19,8 @@ export class AddpresComponent implements OnInit, OnDestroy {
   tipo: any;
   iva: any = 0;
   total: any = 0;
-  subscriptionOnChange; subscriptionOnSubmit: Subscription;
+  subscriptionOnChange: Subscription;
+  subscriptionOnSubmit: Subscription;
 
   constructor(private pf: FormBuilder,
     private presupuestoService: PresupuestosService) { }
@@ -69,8 +70,10 @@ export class AddpresComponent implements OnInit, OnDestroy {
 
   ngOnDestroy () {
      console.log('AddpresComponent.ngOnDestroy (), realizando unsubscribes');
-     this.subscriptionOnChange.unsubscribe();
-     if (this.subscriptionOnChange.subscriptionOnSubmint) {
+     if (this.subscriptionOnChange) {
+        this.subscriptionOnChange.unsubscribe();
+     }
+     if (this.subscriptionOnSubmit) {
       this.subscriptionOnSubmit.unsubscribe();
      }
   }
